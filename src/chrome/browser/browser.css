@@ -846,10 +846,19 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon,
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {
-  background-color: hsla(210,48%,96%,.75);
+/*   background-color: hsla(210,48%,96%,.75);
   border-color: hsla(210,54%,20%,.3) hsla(210,54%,20%,.35) hsla(210,54%,20%,.4);
   box-shadow: 0 0 1px hsla(210,54%,20%,.03),
-              0 0 2px hsla(210,54%,20%,.1);
+              0 0 2px hsla(210,54%,20%,.1); */
+  background-color: hsla(190,60%,70%,.5);
+  border-color: hsla(190,50%,65%,.8) hsla(190,50%,50%,.8) hsla(190,50%,40%,.8);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
+              0 0 0 1.5px rgba(255,255,255,.1) inset,
+              0 1px 0 rgba(0,0,0,.1),
+              0 0 3.5px hsl(190,90%,80%);
+  transition: background-color .4s ease-in,
+                   border-color .3s ease-in,
+                   box-shadow .3s ease-in;
 }
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
@@ -1540,7 +1549,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
     .ac-comment[selected="true"],
     .ac-url-text[selected="true"],
-    .ac-action-text[selected="true"] {
+    .ac-action-text[selected="true"] {	
       color: inherit !important;
     }
   }
@@ -1594,7 +1603,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
               0 0 2px rgba(0,0,0,.4) inset;
 }
 
-#go-button,
 #urlbar-go-button {
   -moz-image-region: rect(0px, 56px, 14px, 42px);
   background-image: linear-gradient(rgb(115,213,115), rgb(96,190,96) 49%, rgb(82,174,82) 51%, rgb(79,155,79));
@@ -1602,9 +1610,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
               -1px -1px 1px rgba(255,255,255,.25) inset;
 }
 
-#go-button:hover,
 #urlbar-go-button:hover {
   background-image: linear-gradient(rgb(96,221,96), rgb(71,191,71) 49%, rgb(54,171,54) 51%, rgb(50,147,50));
+}
+
+#go-button {
+  -moz-image-region: rect(0px, 56px, 14px, 42px);
 }
 
 #urlbar-reload-button {
