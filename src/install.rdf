@@ -3,11 +3,11 @@
   <Description about="urn:mozilla:install-manifest">
 	<!-- Target Application(s) this extension can install into, with minimum and maximum supported versions. -->
 	<em:targetApplication>
-      <!-- Firefox? Wait, no! That's not what we're supporting!
+      <!-- Firefox? Wait, no! The beast was already long dead.
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>45.0a1</em:minVersion>
-        <em:maxVersion>54.0a1</em:maxVersion>
+        <em:minVersion>45.0</em:minVersion>
+        <em:maxVersion>56.0</em:maxVersion>
       </Description -->
 	  <!-- Pale Moon -->
       <Description>
@@ -24,7 +24,7 @@
 
 	<!-- Extension's info and metadata -->
 	<em:name>Stratum</em:name>
-	<em:version>1.0.0</em:version>
+	<em:version>1.1.0</em:version>
 	<em:description>A port of the default Strata theme in Firefox 4.</em:description>
 	<em:creator>FranklinDM</em:creator>
 	<em:contributor>Mozilla Contributors</em:contributor>
