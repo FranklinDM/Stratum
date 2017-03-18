@@ -122,6 +122,7 @@
 #appmenu-button[open] {
   border-radius: 0;
 }
+
 /* orange ff button */
 /* #appmenu-button {
   background-image: linear-gradient(rgb(247,182,82), rgb(215,98,10) 95%);
@@ -146,6 +147,7 @@
   box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
               0 1px 1px rgba(0,0,0,.2) inset; 
 } */
+
 /* blue pm button */
 #appmenu-button {
   background-image: linear-gradient(rgb(82,182,247), rgb(10,98,215) 95%);
@@ -929,18 +931,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([ 	currentset])) > #unified-back-forward-button > .toolbarbutton-1:-moz-any([disabled],:not([disabled]):not([open]):not(:active)) > .toolbarbutton-icon {
-/*   border-color: hsla(210,54%,20%,.25) hsla(210,54%,20%,.3) hsla(210,54%,20%,.35);
-  box-shadow: 0 1px hsla(0,0%,100%,.3) inset,
-              0 1px hsla(210,54%,20%,.03),
-              0 0 2px hsla(210,54%,20%,.1); */
   background-image: linear-gradient(rgba(251,252,253,.97), rgba(246,247,248,.5) 49%, 
                                     rgba(231,232,233,.45) 51%, rgba(225,226,229,.2));
-/*   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
-              0 0 0 2px rgba(255,255,255,.1) inset,
-              0 0 0 1px rgba(0,0,0,.15),
-              0 1px 0 rgba(0,0,0,.4),
-              0 1px 1px rgba(0,0,0,.3),
-              1px 2px 1px rgba(0,0,0,.2); */
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset,
 			  0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset,
 			  -1px 0.5px 0px 1px rgba(0, 0, 0, 0.15);
@@ -960,6 +952,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   border-left-style: none;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   padding-left: 7px;
   padding-right: 3px;
 }
@@ -975,10 +969,6 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon {
-/*   background-color: hsla(210,48%,96%,.75);
-  border-color: hsla(210,54%,20%,.3) hsla(210,54%,20%,.35) hsla(210,54%,20%,.4);
-  box-shadow: 0 0 1px hsla(210,54%,20%,.03),
-              0 0 2px hsla(210,54%,20%,.1); */
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset,
 			  0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset,
 			  -1px 0.5px 0px 1px rgba(0, 0, 0, 0.15);
@@ -1007,10 +997,6 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   border-radius: 10000px;
   padding: 5px;
   border: none;
-/*   box-shadow: 0 1px 0 hsla(0,0%,100%,.3) inset,
-              0 0 0 1px hsla(0,0%,100%,.3) inset,
-              0 0 0 1px hsla(210,54%,20%,.25),
-              0 1px 0 hsla(210,54%,20%,.35); */
   background-image: linear-gradient(rgba(251,252,253,.97), rgba(246,247,248,.5) 49%, 
                                          rgba(231,232,233,.45) 51%, rgba(225,226,229,.2));
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
@@ -1022,12 +1008,6 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:not([disabled="true"]):not([open="true"]):not(:active):hover > .toolbarbutton-icon {
-/*   background-color: hsla(210,48%,96%,.75);
-  box-shadow: 0 1px 0 hsla(0,0%,100%,.3) inset,
-              0 0 0 1px hsla(0,0%,100%,.3) inset,
-              0 0 0 1px hsla(210,54%,20%,.3),
-              0 1px 0 hsla(210,54%,20%,.4),
-              0 0 4px hsla(210,54%,20%,.2); */
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
               0 0 0 2px rgba(255,255,255,.1) inset,
               0 0 0 1px hsla(190,50%,40%,.3),
@@ -1039,22 +1019,11 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button[open="true"] > .toolbarbutton-icon {
-/*   background-color: hsla(210,54%,20%,.15);
-  box-shadow: 0 1px 1px hsla(210,54%,20%,.1) inset,
-              0 0 1px hsla(210,54%,20%,.2) inset,
-              0 0 0 1px hsla(210,54%,20%,.4),
-              0 1px 0 hsla(210,54%,20%,.2);
- */
   box-shadow: 0 0 6.5px rgba(0,0,0,.4) inset,
               0 0 2px rgba(0,0,0,.4) inset,
               0 0 0 1px rgba(0,0,0,.65),
               0 2px 0 rgba(255,255,255,.4);
 }
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button[disabled] > .toolbarbutton-icon {
-  box-shadow: 0 0 0 1px hsla(210,54%,20%,.55),
-              0 1px 0 hsla(210,54%,20%,.65);
-} */
 
 .unified-nav-back[_moz-menuactive]:-moz-locale-dir(ltr),
 .unified-nav-forward[_moz-menuactive]:-moz-locale-dir(rtl) {
@@ -1240,57 +1209,6 @@ toolbar[brighttext] #bookmarks-menu-button.bookmark-item {
   border-color: rgba(0,0,0,.25) rgba(0,0,0,.32) rgba(0,0,0,.37);
   color: black;
 }
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container {
-  padding-left: 27px;
-  -moz-margin-start: -27px;
-  position: relative;
-  pointer-events: none;
-} */
-	
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar { */
-  /* -moz-border-start: none; */
-  /* margin-left: 0; */
-  /* pointer-events: all; */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button:not([switchingtabs]) + #urlbar-container > #urlbar { */
-  /* transition: margin-left 150ms ease-out; */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar:-moz-locale-dir(ltr) { */
-  /* border-top-left-radius: 0; */
-  /* border-bottom-left-radius: 0; */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar:-moz-locale-dir(rtl) { */
-  /* border-top-right-radius: 0; */
-  /* border-bottom-right-radius: 0; */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container { */
-  /* clip-path: url("chrome://browser/content/browser.xul#windows-urlbar-back-button-clip-path"); */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar { */
-/* /*  margin-left: -27px; */ */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled]:hover:not([switchingtabs]) + #urlbar-container > #urlbar { */
-  /* /* delay the hiding of the forward button when hovered to avoid accidental clicks on the url bar */ */
-  /* transition-delay: 100s; */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled]:not(:hover) + #urlbar-container > #urlbar { */
-  /* /* when not hovered anymore, trigger a new transition to hide the forward button immediately */ */
-/* /*  margin-left: -27.01px; */ */
-/* } */
-
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container:-moz-locale-dir(rtl), */
-/* window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar:-moz-locale-dir(rtl) { */
-  /* /* let windows-urlbar-back-button-mask clip the urlbar's right side for RTL */ */
-  /* transform: scaleX(-1); */
-/* } */
 
 html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 .searchbar-textbox:-moz-lwtheme > .autocomplete-textbox-container > .textbox-input-box > html|*.textbox-input::-moz-placeholder {
@@ -1561,8 +1479,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-appearance: none;
   background-origin: border-box;
   border: none;
-  list-style-image: url("chrome://browser/skin/reload-stop-go.png");
-  
+  list-style-image: url("chrome://browser/skin/reload-stop-go.png");  
   margin: -2px;
   -moz-margin-start: 0;
   padding: 0 3px;
@@ -1576,6 +1493,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
 #urlbar-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
+}
+
+/* rounded right edges for go/stop/reload */ 
+#urlbar-go-button,
+#urlbar-reload-button,
+#urlbar-stop-button {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 /* ff4 colored go/stop/reload */
