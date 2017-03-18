@@ -715,8 +715,8 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   counter-reset: smallicons;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+#navigator-toolbox > #nav-bar .toolbarbutton-1,
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-appearance: none;
   border: none;
   padding: 0;
@@ -735,7 +735,12 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding-right: 5px;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > menupopup {
+#navigator-toolbox[iconsize=small] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button)),
+#navigator-toolbox[mode=full] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button)) {
+  margin: 2px;
+}
+
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > menupopup {
   margin-top: -3px;
 }
 
@@ -743,15 +748,43 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-padding-end: 0;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
   -moz-padding-start: 0;
   -moz-box-align: center;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+/* hide the dropmaker during text and icon mode */
+#navigator-toolbox[mode=full] .toolbarbutton-1[type=menu] > .toolbarbutton-menu-dropmarker {
+  display: none !important;
+}
+
+#navigator-toolbox[mode=icons][iconsize=large] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 4px !important;
+  padding-right: 5px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+#navigator-toolbox[mode=icons][iconsize=small] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
+  margin-top: 1px;
+  margin-bottom: 0px;
+  margin-left: -1px;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1,
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1 {
   padding: 2px 6px;
   background: rgba(151,152,153,.05)
               linear-gradient(rgba(251,252,253,.95), rgba(246,247,248,.47) 49%, 
@@ -776,12 +809,12 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 3px 7px;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1[type=menu] > .toolbarbutton-text /* hack for add-ons that forcefully display the label */ {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[type=menu] > .toolbarbutton-text /* hack for add-ons that forcefully display the label */ {
   -moz-padding-end: 17px;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker {
   -moz-margin-start: -15px;
 }
 
@@ -789,77 +822,50 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-border-end: none;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-  padding: 8px 5px 7px;
-}
-
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:hover):not(:active):not([open]) > .toolbarbutton-menubutton-dropmarker::before {
-  content: "";
-  display: -moz-box;
-  width: 1px;
-  height: 18px;
-  -moz-margin-end: -1px;
-  background-image: linear-gradient(hsla(210,54%,20%,.2) 0, hsla(210,54%,20%,.2) 18px);
-  background-clip: padding-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1px 18px;
-  box-shadow: 0 0 0 1px hsla(0,0%,100%,.2);
-}
-
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon:-moz-locale-dir(ltr),
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(rtl) {
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon:-moz-locale-dir(ltr),
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(rtl) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon:-moz-locale-dir(rtl),
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(ltr) {
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon:-moz-locale-dir(rtl),
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(ltr) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-container,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-container,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-menubutton-dropmarker,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([disabled]):hover,
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover,
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([disabled]):hover {
   background-color: hsla(190,60%,70%,.5);
   border-color: hsla(190,50%,65%,.8) hsla(190,50%,50%,.8) hsla(190,50%,40%,.8);
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
 			  0 0 0 1.5px rgba(255,255,255,.1) inset,
 			  0 1px 0 rgba(0,0,0,.1),
 			  0 0 3.5px hsl(190,90%,80%);
-/*  transition: background-color .4s ease-in,
-				   border-color .3s ease-in,
-				   box-shadow .3s ease-in;*/
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([buttonover]):not([open]):not(:active):hover > .toolbarbutton-menubutton-dropmarker:not([disabled]) {
   background-color: hsla(190,60%,70%,.5);
   border-color: hsla(190,50%,65%,.8) hsla(190,50%,50%,.8) hsla(190,50%,40%,.8);
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
               0 0 0 1.5px rgba(255,255,255,.1) inset,
               0 1px 0 rgba(0,0,0,.1),
               0 0 3.5px hsl(190,90%,80%);
-  transition: background-color .4s ease-in,
-                   border-color .3s ease-in,
-                   box-shadow .3s ease-in;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-container,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {
-/*   background-image: linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.1));
-  background-color: hsla(210,54%,20%,.15);
-  border-color: hsla(210,54%,20%,.3) hsla(210,54%,20%,.35) hsla(210,54%,20%,.4);
-  box-shadow: 0 1px 1px hsla(210,54%,20%,.1) inset,
-              0 0 1px hsla(210,54%,20%,.2) inset,
-              allows windows-keyhole-forward-clip-path to be used for non-hover as well as hover:
-              0 1px 0 hsla(210,54%,20%,0),
-              0 0 2px hsla(210,54%,20%,0);
-  text-shadow: none; */
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-container,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]),
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active),
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active)  {
   background-color: transparent;
   border-color: rgba(0,0,0,.65) rgba(0,0,0,.55) rgba(0,0,0,.5);
   box-shadow: 0 0 6.5px rgba(0,0,0,.4) inset,
@@ -868,11 +874,13 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   text-shadow: none;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:-moz-any(:hover,[open]) > .toolbarbutton-menubutton-dropmarker:not([disabled]) > .dropmarker-icon {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:-moz-any(:hover,[open]) > .toolbarbutton-menubutton-dropmarker:not([disabled]) {
   -moz-border-start-color: hsla(210,54%,20%,.35);
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1[checked]:not(:active):hover > .toolbarbutton-icon {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[checked]:not(:active):hover > .toolbarbutton-icon,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1[checked]:not(:active):hover,
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1[checked]:not(:active):hover {
   background-color: rgba(90%,90%,90%,.4);
   transition: background-color .4s;
 }
@@ -956,6 +964,31 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   border-bottom-left-radius: 0px;
   padding-left: 7px;
   padding-right: 3px;
+}
+
+#navigator-toolbox[iconsize=small] #back-button,
+#navigator-toolbox[iconsize=small][mode=icons] #back-button > .toolbarbutton-icon,
+#navigator-toolbox:-moz-any([mode=full], [mode=text]) #back-button {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+#navigator-toolbox:-moz-any([mode=full], [mode=text]) #back-button,
+#navigator-toolbox:-moz-any([mode=full], [mode=text]) #forward-button {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#navigator-toolbox[iconsize=small] #forward-button,
+#navigator-toolbox[iconsize=small][mode=icons] #forward-button > .toolbarbutton-icon,
+#navigator-toolbox[mode=full] #forward-button {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  margin-left: -1px;
+}
+
+#navigator-toolbox[iconsize=small][mode=icons] #forward-button > .toolbarbutton-icon {
+  margin-left: 0px;
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"]:not([currentset*="unified-back-forward-button,urlbar-container"]),#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:-moz-locale-dir(ltr) > .toolbarbutton-icon {
