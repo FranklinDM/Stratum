@@ -1,5 +1,6 @@
 # Stratum
 ![Preview](https://github.com/FranklinDM/Stratum/blob/master/preview.png)
+
 Stratum - A port of Firefox 4's Strata theme for Pale Moon.
 
 ## License
