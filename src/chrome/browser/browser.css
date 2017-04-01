@@ -735,8 +735,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding-right: 5px;
 }
 
-#navigator-toolbox[iconsize=small] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button)),
-#navigator-toolbox[mode=full] .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button)) {
+#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button)){
   margin: 2px;
 }
 
@@ -774,7 +773,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-bottom-left-radius: 0px !important;
 }
 
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) {
+#navigator-toolbox[mode=icons][iconsize=small] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) {
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -971,6 +970,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 #navigator-toolbox:-moz-any([mode=full], [mode=text]) #back-button {
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
+  margin-left: 1px;
 }
 
 #navigator-toolbox:-moz-any([mode=full], [mode=text]) #back-button,
@@ -981,7 +981,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 #navigator-toolbox[iconsize=small] #forward-button,
 #navigator-toolbox[iconsize=small][mode=icons] #forward-button > .toolbarbutton-icon,
-#navigator-toolbox[mode=full] #forward-button {
+#navigator-toolbox:-moz-any([mode=full], [mode=text]) #forward-button {
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
   margin-left: -1px;
@@ -1739,7 +1739,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-tab,
 .tabs-newtab-button {
   -moz-appearance: none;
-  background: linear-gradient(-moz-dialog, -moz-dialog);
+  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
+					linear-gradient(-moz-dialog, -moz-dialog);
+  background: none;
   background-origin: border-box;
   background-position: 1px 2px;
   background-size: calc(100% - 2px) calc(100% - 2px);
