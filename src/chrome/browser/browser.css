@@ -1340,7 +1340,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 
 #notification-popup-box:not([hidden]) + #identity-box {
   -moz-padding-start: 10px;
-  border-radius: 0;
+  border-radius: 2px;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
