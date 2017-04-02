@@ -682,8 +682,14 @@ toolbar[brighttext] .toolbarbutton-1 {
 .toolbarbutton-1[disabled=true] > .toolbarbutton-menu-dropmarker,
 .toolbarbutton-1[disabled=true] > .toolbarbutton-menubutton-dropmarker,
 .toolbarbutton-1[disabled=true] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-.toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled] > .toolbarbutton-icon {
+.toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled] > .toolbarbutton-icon,
+#navigator-toolbox:-moz-any([mode=text],[mode=full]) > #nav-bar .toolbarbutton-1[disabled=true] {
   opacity: .4;
+}
+
+/* don't apply opacity when in text/full icon mode, only the button container should have lower opacity */
+#navigator-toolbox:-moz-any([mode=text],[mode=full]) > #nav-bar .toolbarbutton-1[disabled=true] > :-moz-any(.toolbarbutton-icon, .toolbarbutton-menu-dropmarker, .toolbarbutton-menubutton-dropmarker)  {
+  opacity: 1;
 }
 
 .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
@@ -937,7 +943,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   -moz-box-align: center;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([ 	currentset])) > #unified-back-forward-button > .toolbarbutton-1:-moz-any([disabled],:not([disabled]):not([open]):not(:active)) > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > .toolbarbutton-1:-moz-any([disabled],:not([disabled]):not([open]):not(:active)) > .toolbarbutton-icon {
   background-image: linear-gradient(rgba(251,252,253,.97), rgba(246,247,248,.5) 49%, 
                                     rgba(231,232,233,.45) 51%, rgba(225,226,229,.2));
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset,
@@ -1002,9 +1008,10 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon {
-  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset,
-			  0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset,
-			  -1px 0.5px 0px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
+              0 0 0 2px rgba(255,255,255,.1) inset,
+              0 1px 0px rgba(0,0,0,.1),
+              0 0 5px 1px hsl(190,90%,80%);
 }
 
 window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button {
@@ -1739,9 +1746,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-tab,
 .tabs-newtab-button {
   -moz-appearance: none;
-  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)),
-					linear-gradient(-moz-dialog, -moz-dialog);
   background: none;
+  background-image: linear-gradient(to top, rgba(10%,10%,10%,.4) 1px, transparent 1px), linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2)), 
+					linear-gradient(-moz-dialog, -moz-dialog);
   background-origin: border-box;
   background-position: 1px 2px;
   background-size: calc(100% - 2px) calc(100% - 2px);
