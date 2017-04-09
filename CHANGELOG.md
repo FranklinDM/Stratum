@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.2.0
+- Fix inconsistent styling
+- Restore missing opacity applied to buttons when it is disabled during full/text modes
+- Restore glow on the forward button
+- Use defined color instead of ThreeDDarkShadow for urlbar border color
+- Made the identity box round again when a notification popup box is visible
+- Add support for Home Styler (when you have this add-on, the about:home page will now look like FF4's)
+
 ### 1.1.5
 - Fix for margin on text-only mode when use small icons is not enabled
 - Restore missing background for unselected tabs
