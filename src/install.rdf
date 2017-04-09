@@ -24,7 +24,7 @@
 
 	<!-- Extension's info and metadata -->
 	<em:name>Stratum</em:name>
-	<em:version>1.1.5</em:version>
+	<em:version>1.2.0</em:version>
 	<em:description>A port of the default Strata theme in Firefox 4.</em:description>
 	<em:creator>FranklinDM</em:creator>
 	<em:contributor>Mozilla Contributors</em:contributor>
