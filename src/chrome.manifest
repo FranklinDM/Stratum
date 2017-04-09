@@ -1,3 +1,4 @@
 skin	global			stratum		chrome/global/
 skin	browser			stratum		chrome/browser/
 skin	mozapps			stratum		chrome/mozapps/
+skin	abouthome 		stratum 	chrome/abouthome/
