@@ -312,15 +312,13 @@
   margin: 0;
 }
 
-#header-utils-btn {
-  list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities");
-  -moz-margin-end: 16px;
+#header-search[focused="true"] {
+  background-color: white;
 }
 
-@media not all and (-moz-windows-default-theme) {
-  #header-utils-btn {
-    list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities-native");
-  }
+#header-utils-btn {
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  -moz-margin-end: 16px;
 }
 
 .view-header {
