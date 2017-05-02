@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.2.5
+- Proper styling for bookmark items and identity icon
+- Remove border from proxy favicon (default)
+- Add image document proxy favicon styling
+- Add missing glow to some toolbar icons
+- Proper standalone go-button styling
+- Minor changes to add-ons page style
+- Restore in-content ui background
+- Remove unused images
+	
 ### 1.2.0
 - Fix inconsistent styling
 - Restore missing opacity applied to buttons when it is disabled during full/text modes
