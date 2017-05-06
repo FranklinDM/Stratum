@@ -742,8 +742,13 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding-right: 5px;
 }
 
-#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button)){
+#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)){
   margin: 2px;
+}
+
+/* excempt personal toolbar from added margins */
+#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) #PersonalToolbar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) {
+  margin: 0px;
 }
 
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > menupopup {
@@ -1242,7 +1247,7 @@ toolbar[brighttext] #bookmarks-menu-button.bookmark-item {
   #urlbar,
   .searchbar-textbox {
     border-color: rgba(0,0,0,.25) rgba(0,0,0,.32) rgba(0,0,0,.37);
-  }
+  }  
 }
 
 #urlbar:-moz-lwtheme,
@@ -3854,6 +3859,28 @@ html|*#gcli-output-frame {
     border: 1px solid rgba(10%,10%,10%,.4);
     border-top-style: none;
     background-clip: padding-box;
+  }
+  /* urlbar & searchbar effect */
+  #urlbar,
+  .searchbar-textbox {
+    background-color: rgba(255,255,255,.725);
+    border-color: rgba(0,0,0,.25) rgba(0,0,0,.32) rgba(0,0,0,.37);
+    color: black;
+  }
+
+  html|*.urlbar-input:-moz-placeholder,
+  .searchbar-textbox > .autocomplete-textbox-container > .textbox-input-box > html|*.textbox-input:-moz-placeholder {
+    color: #777;
+  }
+
+  #urlbar:hover,
+  .searchbar-textbox:hover {
+    background-color: rgba(255,255,255,.898);
+  }
+
+  #urlbar[focused="true"],
+  .searchbar-textbox[focused="true"] {
+    background-color: white;
   }
 }
 
