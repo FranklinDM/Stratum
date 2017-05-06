@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.6
+- Remove aboutReader.css
+- Update session restore and certificate error styling
+- Minor fixes to browser.css (see commit)
+- Don't invert toolbar buttons dropmarker when tabs are on top
+
 ### 1.2.5
 - Proper styling for bookmark items and identity icon
 - Remove border from proxy favicon (default)
