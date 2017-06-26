@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.2.7
+- Restore missing icons on notification panel
+
 ### 1.2.6
 - Remove aboutReader.css
 - Update session restore and certificate error styling
