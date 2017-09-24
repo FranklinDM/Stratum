@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.2.8
+- Drop support for versions lower than PM27.4
+- Update devtools styling
+
 ### 1.2.7
 - Restore missing icons on notification panel
 
