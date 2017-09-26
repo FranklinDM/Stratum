@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.2.9
+- Drop support for PM 27.4 and lower
+- Support PM 27.5's Win10 window styling implementation
+- Styling for verify places database (about:support)
+- Restore app menu private browsing indicator
+- Restore padlock icons and add glow to padlock and favicon
+  - If you want to remove the padlock, switch the **browser.padlock.show** pref to false.
+
 ### 1.2.8
 - Drop support for versions lower than PM27.4
 - Update devtools styling
