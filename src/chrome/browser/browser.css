@@ -1348,15 +1348,15 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   outline-offset: -3px;
 }
 
-/* hide the padlock icons (ff4 style) */
-#padlock-ib, #padlock-ib-left, #padlock-ub-right, #padlock-sb, #padlock-tab {
-  display: none;
+/* Glow for padlock icon */
+#padlock-ib, #padlock-ib-left {
+  filter: drop-shadow(0px 0px 1px #ffffff) !important;
 }
 
-/* #identity-icon-labels {
-  -moz-padding-start: 2px;
-  -moz-padding-end: 5px;
-} */
+/* Restore glow for favicon */
+#page-proxy-favicon {
+  filter: drop-shadow(0px 0px 5px #ffffff);
+}
 
 #identity-icon-labels {
   -moz-margin-start: 1px;
