@@ -3342,11 +3342,11 @@ html|*#gcli-output-frame {
   background-position: top left;
 }
 
-/* #main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .box-inherit > .button-icon {
+#main-window[privatebrowsingmode=temporary] #appmenu-button > .button-box > .box-inherit > .button-icon {
   list-style-image: url("chrome://browser/skin/privatebrowsing-light.png");
   width: 20px;
   height: 16px;
-} */
+}
 
 @media not all and (-moz-windows-classic) {
   #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
