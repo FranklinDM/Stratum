@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.3.0
+- Default accent color on Win10 changed to black-on-white
+- Remove unused urlbar progress bar styles (as of PM 27.5)
+  - This causes problems with the status bar progress meter
+
 ### 1.2.9
 - Drop support for PM 27.4 and lower
 - Support PM 27.5's Win10 window styling implementation
