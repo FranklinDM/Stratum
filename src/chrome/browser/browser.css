@@ -701,7 +701,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar {
   /* force iconsize="small" on this toolbar */
-  counter-reset: smallicons;
+  counter-reset: largeicons;
 }
 
 #navigator-toolbox > #nav-bar .toolbarbutton-1,
@@ -710,6 +710,17 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border: none;
   padding: 0;
   background: none;
+}
+
+/* Enforce arbitrary 24px (icons) & 18px (others) height for toolbar icons */
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not(#back-button) > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not(#back-button) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+  height: 24px;
+}
+
+#navigator-toolbox > #nav-bar .toolbarbutton-1:not(#back-button) > .toolbarbutton-icon,
+#navigator-toolbox > #nav-bar .toolbarbutton-1:not(#back-button) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+  height: 18px;
 }
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not([type=menu-button]),
@@ -724,17 +735,8 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding-right: 5px;
 }
 
-#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)){
+#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) {
   margin: 2px;
-}
-
-/* excempt personal toolbar from added margins */
-#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) #PersonalToolbar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) {
-  margin: 0px;
-}
-
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > menupopup {
-  margin-top: -3px;
 }
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button {
@@ -742,7 +744,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
-  -moz-padding-start: 0;
+  /* -moz-padding-start: 0; */
   -moz-box-align: center;
 }
 
@@ -754,17 +756,8 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[mode=icons][iconsize=large] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
   margin-top: 6px;
   margin-bottom: 6px;
-  padding-left: 4px !important;
-  padding-right: 5px !important;
-  border-top-left-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
-}
-#navigator-toolbox[mode=icons][iconsize=small] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
-  margin-top: 1px;
-  margin-bottom: 0px;
-  margin-left: -1px;
-  border-top-left-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #navigator-toolbox[mode=icons][iconsize=small] > #nav-bar .toolbarbutton-1[type=menu]:not(#back-button):not(#forward-button):not(#feed-button) {
@@ -775,9 +768,10 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-icon,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-badge-container,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
-#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1,
-#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1 {
+#navigator-toolbox:not([mode=icons]) > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]),
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([type=menu-button]) {
   padding: 2px 6px;
   background: rgba(151,152,153,.05)
               linear-gradient(rgba(251,252,253,.95), rgba(246,247,248,.47) 49%, 
@@ -812,29 +806,35 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
-  -moz-border-end: none;
+  /* -moz-border-end: none; */
 }
 
 #navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon:-moz-locale-dir(ltr),
-#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(rtl) {
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:-moz-locale-dir(ltr),
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(rtl),
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 #navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon:-moz-locale-dir(rtl),
-#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(ltr) {
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:-moz-locale-dir(rtl),
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon:-moz-locale-dir(ltr),
+#navigator-toolbox > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border-left: none;
 }
 
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-container,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-menubutton-dropmarker,
-#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover,
-#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([disabled]):hover,
-#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover,
-#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([disabled]):hover {
+#navigator-toolbox:not([mode=icons]) > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button,
+#navigator-toolbox > #nav-bar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-menubutton-dropmarker,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):not([checked]):not([open]):not(:active):hover,
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):hover,
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):not([checked]):not([open]):not(:active):hover,
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):hover {
   background-color: hsla(190,60%,70%,.5);
   border-color: hsla(190,50%,65%,.8) hsla(190,50%,50%,.8) hsla(190,50%,40%,.8);
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
@@ -856,9 +856,10 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-container,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active > .toolbarbutton-icon,
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]),
-#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active),
-#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active)  {
+#navigator-toolbox:not([mode=icons]) > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active,
+#navigator-toolbox > #nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]),
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):-moz-any([open],[checked],:hover:active),
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):-moz-any([open],[checked],:hover:active)  {
   background-color: transparent;
   border-color: rgba(0,0,0,.65) rgba(0,0,0,.55) rgba(0,0,0,.5);
   box-shadow: 0 0 6.5px rgba(0,0,0,.4) inset,
@@ -867,7 +868,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   text-shadow: none;
 }
 
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:-moz-any(:hover,[open]) > .toolbarbutton-menubutton-dropmarker:not([disabled]) {
+#navigator-toolbox > #nav-bar .toolbarbutton-1:-moz-any(:hover,[open]) > .toolbarbutton-menubutton-dropmarker:not([disabled]) {
   -moz-border-start-color: hsla(210,54%,20%,.35);
 }
 
