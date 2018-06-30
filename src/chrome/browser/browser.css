@@ -701,7 +701,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar {
   /* force iconsize="small" on this toolbar */
-  counter-reset: largeicons;
+  counter-reset: smallicons;
 }
 
 #navigator-toolbox > #nav-bar .toolbarbutton-1,
