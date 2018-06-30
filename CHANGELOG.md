@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.0
+- Initial support for Pale Moon 28
+
 ### 1.3.0
 - Default accent color on Win10 changed to black-on-white
 - Remove unused urlbar progress bar styles (as of PM 27.5)
