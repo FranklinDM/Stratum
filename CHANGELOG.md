@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.4.1
+- Drop support for Pale Moon 27
+- Fix inconsistent site icons in Saved Logins
+
 ### 1.4.0
 - Initial support for Pale Moon 28
 
@@ -14,7 +18,7 @@
 - Styling for verify places database (about:support)
 - Restore app menu private browsing indicator
 - Restore padlock icons and add glow to padlock and favicon
-  - If you want to remove the padlock, switch the **browser.padlock.show** pref to false.
+  - If you want to remove the padlock, set the **browser.padlock.show** pref to false.
 
 ### 1.2.8
 - Drop support for versions lower than PM27.4
