@@ -2,79 +2,63 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-
-@import url("chrome://global/skin/");
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-
-#warningScreen
-{
-  background-color: -moz-Dialog;
+#warningScreen {
+  font-size: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-inline-start: calc(48px + 4.6em);
+  padding-inline-end: 48px;
 }
 
-#warningBox
-{
-  background-color: -moz-Field;
-  color: -moz-FieldText;
-  border: 1px solid ThreeDShadow;
-  border-radius: 10px;
-  padding: 3em;
-  -moz-padding-start: 30px;
-  margin-left: 1em;
-  margin-right: 1em;
+.title {
+  background-image: url("chrome://global/skin/icons/warning.svg");
 }
 
-#warningInnerBox
-{
- max-width: 50em;
+#warningBox {
+  background-color: rgba(255, 255, 255, 0.35);
+  background-image: linear-gradient(rgba(255, 255, 255, 0),
+                                    rgba(255, 255, 255, 0.75));
+  border: 1px solid #C3CEDF;
+  padding: 20px;
+}
+@media (max-width: 675px) {
+    #warningBox {
+        padding: 0;
+        background: none;
+        border: none;
+    }
 }
 
-#warningTitle
-{
-  margin: 0 0 .6em 0;
-  font-size: 160%;
-  border-bottom: 1px solid ThreeDLightShadow
+#warningTitle {
+  font-weight: lighter;
+  line-height: 1.2;
+  color: #333;
+  margin: 0;
+  margin-bottom: .5em;
 }
 
-#warningText
-{
-  font-size: 110%;
-  margin-left: 0;
+#warningText {
+  margin: 1em 0;
 }
 
-#warningButton
-{
+#warningButton {
   margin-top: 0.6em;
 }
 
-#showWarningNextTime
-{
-  margin-top: 0.6em;
+#filterRow {
+  margin-top: 4px;
+  margin-inline-start: 4px;
 }
 
-#exclam
-{
-  list-style-image: url("chrome://global/skin/icons/warning-large.png");
-  -moz-margin-end: 3em;
+#configTree {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-#configTreeBody::-moz-tree-cell-text(user)
-{
+#configTreeBody::-moz-tree-cell-text(user) {
   font-weight: bold;
 }
 
-#configTreeBody::-moz-tree-cell-text(locked)
-{
+#configTreeBody::-moz-tree-cell-text(locked) {
   font-style: italic;
-}
-
-#configTree 
-{  
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#filterRow
-{
-  margin-top: 5px;
 }

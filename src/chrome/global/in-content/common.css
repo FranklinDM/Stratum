@@ -7,7 +7,8 @@
 
 *|*:root {
   --in-content-page-color: #424e5a;
-  --in-content-page-background: #fbfbfb;
+  --in-content-page-background: url("chrome://global/skin/inContentUI/background-texture.png");
+  --in-content-page-background-color: -moz-Dialog;
   --in-content-text-color: #333;
   --in-content-selected-text: #fff;
   --in-content-header-border-color: #c8c8c8;
@@ -21,12 +22,13 @@
   --in-content-border-highlight: #ff9500;
   --in-content-border-focus: #0095dd;
   --in-content-border-color: #c1c1c1;
-  --in-content-category-text: #c1c1c1;
+  --in-content-category-text: #252F3B;
   --in-content-category-border-focus: 1px dotted #fff;
-  --in-content-category-text-selected: #f2f2f2;
+  --in-content-category-border-selected: #C3CEDF;
+  --in-content-category-border-selected-end: #E2E9F2;
+  --in-content-category-text-selected: #252F3B;
   --in-content-category-background: #424f5a;
-  --in-content-category-background-hover: #5e6972;
-  --in-content-category-background-active: #343f48;
+  --in-content-category-background-active: rgba(255, 255, 255, 0.4);
   --in-content-tab-color: #424f5a;
   --in-content-link-color: #0095dd;
   --in-content-link-color-hover: #178ce5;
@@ -44,8 +46,48 @@ xul|page,
 xul|window {
   font: message-box;
   -moz-appearance: none;
-  background-color: var(--in-content-page-background);
+  background-repeat: repeat;
+  background-color: var(--in-content-page-background-color);
+  background-image: var(--in-content-page-background);
   color: var(--in-content-page-color);
+}
+
+@media (-moz-windows-default-theme) and (-moz-os-version: windows-vista),
+       (-moz-windows-default-theme) and (-moz-os-version: windows-win7) {
+  *|*:root {
+    --in-content-page-color: #000;
+    --in-content-page-background-color: #CCD9EA;
+  }
+}
+
+@media (-moz-windows-glass) {
+  *|*:root {
+    /* Blame shorlander for this monstrosity. */
+    --in-content-page-background: /* Side gradients */
+                      linear-gradient(to right,
+                                      rgba(255,255,255,0.2), transparent 40%,
+                                      transparent 60%, rgba(255,255,255,0.2)),
+                      /* Aero-style light beams */
+                      -moz-linear-gradient(left 32deg,
+                                           /* First light beam */
+                                           transparent 19.5%, rgba(255,255,255,0.1) 20%,
+                                           rgba(255,255,255,0.1) 21.5%, rgba(255,255,255,0.2) 22%,
+                                           rgba(255,255,255,0.2) 25.5%, rgba(255,255,255,0.1) 26%,
+                                           rgba(255,255,255,0.1) 27.5%, transparent 28%,
+                                           /* Second light beam */
+                                           transparent 49.5%, rgba(255,255,255,0.1) 50%,
+                                           rgba(255,255,255,0.1) 52.5%, rgba(255,255,255,0.2) 53%,
+                                           rgba(255,255,255,0.2) 54.5%, rgba(255,255,255,0.1) 55%,
+                                           rgba(255,255,255,0.1) 57.5%, transparent 58%,
+                                           /* Third light beam */
+                                           transparent 87%, rgba(255,255,255,0.2) 90%),
+                      /* Texture */
+                      url("chrome://global/skin/inContentUI/background-texture.png");
+  }
+}
+
+.warningBackground.active {
+  background: -moz-Dialog;
 }
 
 html|body {
@@ -87,11 +129,15 @@ xul|caption > xul|label {
 }
 
 *|*.main-content {
-  padding-top: 40px;
-  padding-inline-end: 44px; /* compensate the 4px margin of child elements */
-  padding-bottom: 48px;
-  padding-inline-start: 48px;
-  overflow: auto;
+  margin: 40px;
+  padding: 20px 48px;
+  /* overflow: auto; */
+  /* Needed to allow the radius to clip the inner content, see bug 595656 */
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.35);
+  background-image: linear-gradient(rgba(255, 255, 255, 0),
+                                    rgba(255, 255, 255, 0.75));
+  border: 1px solid #C3CEDF;
 }
 
 xul|prefpane > xul|*.content-box {
@@ -615,9 +661,9 @@ xul|*.radio-label-box {
 
 *|*#categories {
   -moz-appearance: none;
-  background-color: var(--in-content-category-background);
-  padding-top: 39px;
-  margin: 0;
+  padding-top: 70px;
+  margin: 0 -41px 0 40px;
+  z-index: 2;
   border-width: 0;
 }
 
@@ -625,22 +671,30 @@ xul|*.radio-label-box {
   -moz-appearance: none;
   color: var(--in-content-category-text);
   border-inline-end-width: 0;
-  padding-inline-start: 15px;
-  padding-inline-end: 21px;
+  padding: 10px 50px 10px 14px;
+  border: 1px solid transparent;
   min-height: 40px;
-  transition: background-color 150ms;
 }
 
-*|*.category:hover {
-  background-color: var(--in-content-category-background-hover);
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+  *|*.category:-moz-locale-dir(ltr) {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  *|*.category:-moz-locale-dir(rtl) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 
 *|*.category[selected],
 *|*.category.selected {
   background-color: var(--in-content-category-background-active);
   color: var(--in-content-category-text-selected);
-  padding-inline-start: 11px; /* compensate the 4px border */
-  border-inline-start: solid 4px var(--in-content-border-highlight);
+  border-color: var(--in-content-category-border-selected);
+  -moz-border-end-color: var(--in-content-category-border-selected-end);
 }
 
 *|*#categories[keyboard-navigation="true"]:-moz-focusring > *|*.category[current] {
@@ -650,7 +704,7 @@ xul|*.radio-label-box {
 
 *|*.category-name {
   line-height: 22px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding-bottom: 2px;
   padding-inline-start: 9px;
   margin: 0;
@@ -660,6 +714,7 @@ xul|*.radio-label-box {
 *|*.category-icon {
   width: 24px;
   height: 24px;
+  filter: invert(100%) brightness(0%);
 }
 
 /* header */
