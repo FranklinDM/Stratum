@@ -90,9 +90,9 @@
 }
 
 .error-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png");
-  width: 16px;
-  height: 15px;
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.png") !important;
+  width: 16px !important;
+  height: 15px !important;
   margin: 3px 0;
 }
 
@@ -258,7 +258,7 @@
   list-style-image: url("chrome://mozapps/skin/extensions/category-searchengines.png");
 }
 #category-extension > .category-icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/category-extensions.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.svg");
 }
 #category-service > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-service.png");
@@ -452,7 +452,7 @@
 }
 
 .icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
+  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.svg");
   max-width: 48px;
   max-height: 48px;
 }
