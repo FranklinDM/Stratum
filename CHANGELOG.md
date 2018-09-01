@@ -6,7 +6,7 @@
 - Change the padlock color to plain white on secure sites
 - Make the transition between the tab and the navigation bar smooth (it looks abrupt)
 - Fix inconsistent site icons in Saved Logins
-- Update media controls, menu, and Permissions Manager style
+- Update developer tools (in browser.css), media controls, menu, and Permissions Manager style
 - Use CSS variables in browser style
   - Toolbar button transition speed and timing function, toolbar color, toolbar button radius, and tab background can now be adjusted
 
