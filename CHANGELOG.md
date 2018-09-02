@@ -1,5 +1,20 @@
 # Changelog
 
+### 1.4.2
+- Additional fixes
+	- Fix all tabs button appearance (no thumbnails/list mode)
+	- Change .toolbarbutton-badge-container to .toolbarbutton-badge-stack
+	- Add more buttons to the exclusions to arbitrary toolbar icon size
+	- Add --toolbar-border-radius variable
+	- Add --tab-selected-highlight variable
+	- Adjust default toolbar color for Win7 + non-default theme/other platforms (use FF4 default)
+	- Some selectors did not use var counterparts
+- Use unprefixed form of these properties
+	- -moz-margin-start -> margin-inline-start
+	- -moz-margin-end -> margin-inline-end
+	- -moz-padding-start -> margin-padding-start
+	- -moz-padding-end -> margin-padding-end
+
 ### 1.4.1
 - Drop support for Pale Moon 27
 - Adjust site icon glow on identity box
