@@ -60,7 +60,7 @@
 #alertIcon {
   margin-top: 6px;
   margin-inline-start: 8px;
-  margin-inline-end: 0;
+  margin-inline-start: 0;
   margin-bottom: 0;
   width: 16px;
   min-height: 16px;
@@ -131,7 +131,7 @@
   border-radius: 20px;
   min-width: 0;
   list-style-image: url("chrome://mozapps/skin/extensions/utilities.svg#utilities-grayscale");
-  margin-inline-end: 0;
+  margin-inline-start: 0;
   margin-bottom: 0;
 }
 

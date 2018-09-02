@@ -17,7 +17,7 @@ body {
 
 button {
   margin-inline-start: 0;
-  margin-inline-end: 8px;
+  margin-inline-start: 8px;
 }
 
 table {
@@ -58,7 +58,7 @@ td {
   margin-top: 2em;
   margin-bottom: 20px;
   margin-inline-start: 20px;
-  margin-inline-end: 0;
+  margin-inline-start: 0;
   padding: 16px;
   width: 30%;
 }
