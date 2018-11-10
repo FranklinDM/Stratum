@@ -131,13 +131,16 @@ xul|caption > xul|label {
 *|*.main-content {
   margin: 40px;
   padding: 20px 48px;
-  /* overflow: auto; */
   /* Needed to allow the radius to clip the inner content, see bug 595656 */
-  overflow: hidden;
+  overflow: auto;
   background-color: rgba(255, 255, 255, 0.35);
   background-image: linear-gradient(rgba(255, 255, 255, 0),
                                     rgba(255, 255, 255, 0.75));
   border: 1px solid #C3CEDF;
+}
+
+*|*.panel {
+  max-width: none !important;
 }
 
 xul|prefpane > xul|*.content-box {
