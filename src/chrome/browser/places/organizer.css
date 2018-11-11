@@ -15,7 +15,7 @@
 
 #back-button,
 #forward-button {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  list-style-image: url("chrome://browser/skin/Toolbar.svg#state");
 }
 
 #back-button {

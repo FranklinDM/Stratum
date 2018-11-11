@@ -17,8 +17,8 @@
   --toolbarbutton-transition-duration: .3s;
   --toolbarbutton-transition-timingfunction: ease-in;
 
-  --toolbarbutton-image: url("chrome://browser/skin/Toolbar.png");
-  --toolbarbutton-inverted-image: url("chrome://browser/skin/Toolbar-inverted.png");
+  --toolbarbutton-image: url("chrome://browser/skin/Toolbar.svg#state");
+  --toolbarbutton-inverted-image: url("chrome://browser/skin/Toolbar.svg#state-inverted");
 
   --tab-background: linear-gradient(transparent, hsla(0,0%,45%,.1) 1px, hsla(0,0%,32%,.2) 80%, hsla(0,0%,0%,.2));
   --tab-background-hover: linear-gradient(hsla(0,0%,100%,.3) 1px, hsla(0,0%,75%,.2) 80%, hsla(0,0%,60%,.2));
