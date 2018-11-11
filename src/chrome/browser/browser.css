@@ -2105,7 +2105,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #ub-feed-button {
   -moz-appearance: none; 
   min-width: 0px; 
-  list-style-image: url("chrome://browser/skin/feeds/feed-icons-16.png");
+  list-style-image: url("chrome://browser/skin/feeds/feed-icons-16.svg");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
 
