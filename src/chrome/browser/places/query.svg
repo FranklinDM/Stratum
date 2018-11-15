@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <linearGradient id="linearGradient4368" x1="23.606" x2="23.606" y1="9.8085" y2="17.448" gradientUnits="userSpaceOnUse" xlink:href="#folderStrokeGradient"/>
+    <linearGradient id="folderStrokeGradient" x1="24.695" x2="18.929" y1="2.2787" y2="17" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6dacd3"/>
+      <stop offset="1" stop-color="#5688a7"/>
+    </linearGradient>
+    <linearGradient id="folderGradient" x1="525.68" x2="525.68" y1="191.95" y2="204.63" gradientTransform="matrix(.83334 0 0 .875 -431.34 -164.38)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c2dcf4"/>
+      <stop offset="1" stop-color="#70b3dc"/>
+    </linearGradient>
+  </defs>
+  <g id="folder" fill="url(#folderGradient)" stroke="url(#folderStrokeGradient)" paint-order="markers stroke fill">
+    <path stroke-width="2" d="M12.188 8v6h1.3125c.2647 0 .5-.1795.5-.5v-5c0-.3123-.2032-.5-.5-.5z"/>
+    <path stroke-width="2" d="M2.9291 1h8.1418A.927.927 0 0 1 12 1.929v12.142a.927.927 0 0 1-.9291.9291H2.9291A.927.927 0 0 1 2 14.0711V1.9291A.927.927 0 0 1 2.929 1z"/>
+  </g>
+  <g id="search-icon" fill="none">
+    <path stroke="#fff" stroke-opacity=".5" d="M6.3339 9.3732a2.3516 2.3516 0 0 1-.5505-1.5146c0-1.3028 1.0556-2.3585 2.3582-2.3585s2.3582 1.0558 2.3582 2.3585-1.0556 2.3585-2.3582 2.3585a2.3485 2.3485 0 0 1-1.5144-.5506l-2.7768 2.7767a.206.206 0 0 1-.2929 0 .206.206 0 0 1 0-.2929zm1.8077.4151c-1.0655 0-1.9294-.864-1.9294-1.9297 0-1.0656.864-1.9297 1.9294-1.9297 1.0655 0 1.9294.864 1.9294 1.9296 0 1.0656-.864 1.9297-1.9294 1.9297z"/>
+    <path stroke="#396480" d="M6.3339 8.3734a2.351 2.351 0 0 1-.5505-1.5144c0-1.3026 1.0556-2.3582 2.3582-2.3582s2.3582 1.0556 2.3582 2.3582-1.0556 2.3582-2.3582 2.3582a2.3487 2.3487 0 0 1-1.5144-.5505L3.8504 11.443a.206.206 0 0 1-.2929 0 .206.206 0 0 1 0-.2929zm1.8077.415c-1.0655 0-1.9295-.864-1.9295-1.9294 0-1.0655.864-1.9295 1.9295-1.9295s1.9295.864 1.9295 1.9295c0 1.0655-.864 1.9295-1.9295 1.9295z"/>
+  </g>
+</svg>

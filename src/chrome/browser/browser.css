@@ -444,7 +444,7 @@
 }
 
 #appmenu_bookmarks {
-  list-style-image: url("chrome://browser/skin/places/bookmark.png");
+  list-style-image: url("chrome://browser/skin/places/bookmark.svg");
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
@@ -479,7 +479,7 @@
 #appmenu_bookmarkThisPage,
 #menu_bookmarkThisPage,
 #BMB_bookmarkThisPage {
-  list-style-image: url("chrome://browser/skin/places/bookmark.png");
+  list-style-image: url("chrome://browser/skin/places/bookmark.svg");
   -moz-image-region: rect(0 16px 16px 0);
 }
 
@@ -609,12 +609,12 @@ menuitem.bookmark-item {
 /* ::::: bookmark items ::::: */
 
 .bookmark-item  {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
 .bookmark-item[container] {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
@@ -637,7 +637,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[container][query] {
-  list-style-image: url("chrome://browser/skin/places/query.png");
+  list-style-image: url("chrome://browser/skin/places/query.svg");
   -moz-image-region: auto;
 }
 
@@ -652,12 +652,12 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[query][hostContainer] {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 .bookmark-item[query][hostContainer][open] {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(16px, 32px, 32px, 16px);
 }
 
@@ -1408,7 +1408,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   margin-bottom: 1px;
   margin-inline-start: 3px;
   margin-inline-end: 2px;
-  list-style-image: url(chrome://global/skin/icons/folder-item.png);
+  list-style-image: url(chrome://global/skin/icons/folder-item.svg);
   -moz-image-region: rect(0px, 16px, 16px, 0px)
 }
 
@@ -1428,7 +1428,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  list-style-image: url("chrome://browser/skin/places/bookmark.png");
+  list-style-image: url("chrome://browser/skin/places/bookmark.svg");
   -moz-image-region: rect(0px 48px 16px 32px);
   width: 16px;
   height: 16px;
@@ -1609,7 +1609,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* star button */
 
 #star-button {
-  list-style-image: url("chrome://browser/skin/places/bookmark.png");
+  list-style-image: url("chrome://browser/skin/places/bookmark.svg");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
 
@@ -1630,13 +1630,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* bookmarking panel */
 
 #editBookmarkPanelStarIcon {
-  list-style-image: url("chrome://browser/skin/places/starred48.png");
+  list-style-image: url("chrome://browser/skin/places/starred48.svg");
   width: 48px;
   height: 48px;
 }
 
 #editBookmarkPanelStarIcon[unstarred] {
-  list-style-image: url("chrome://browser/skin/places/unstarred48.png");
+  list-style-image: url("chrome://browser/skin/places/unstarred48.svg");
 }
 
 #editBookmarkPanelTitle {
@@ -1860,7 +1860,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tab-icon-image {
   width: 16px;
   height: 16px;
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
   margin-inline-start: 2px;
   margin-inline-end: 3px;
@@ -2031,7 +2031,7 @@ toolbar[brighttext] #alltabs-button[type="menu"] {
 
 /* All tabs menupopup */
 .alltabs-item > .menu-iconic-left > .menu-iconic-icon {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 

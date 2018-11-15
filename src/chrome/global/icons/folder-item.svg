@@ -1,0 +1,32 @@
+<svg width="32" height="48" version="1.1" viewBox="0 0 32 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="fileStrokeGradient" x1="8.1293" x2="8.4493" y1="-.39148" y2="16.187" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#999" offset="0"/>
+   <stop stop-color="#696969" offset="1"/>
+  </linearGradient>
+  <linearGradient id="folderStrokeGradient" x1="24.695" x2="18.929" y1="2.2787" y2="17" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#dfc65b" offset="0"/>
+   <stop stop-color="#af9b47" offset="1"/>
+  </linearGradient>
+  <linearGradient id="folderGradient" x1="525.68" x2="525.68" y1="191.95" y2="204.63" gradientTransform="matrix(.83334 0 0 .875 -415.34 -164.38)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fcf7c1" offset="0"/>
+   <stop stop-color="#e9cf5f" offset="1"/>
+  </linearGradient>
+  <linearGradient id="fileGradient" x1="7.0777" x2="7.0777" y1="1.6251" y2="15.18" gradientTransform="translate(.0094216 -3e-5)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#ececec" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient4951"  xlink:href="#fileStrokeGradient"/>
+ </defs>
+ <g id="file" stroke="url(#fileStrokeGradient)">
+  <path d="m3.0098 1v13.5c-1e-5.26059.2394.5.5.5h9c.26056 0 .5-.23941.5-.5v-9.5l-3-4z" fill="url(#fileGradient)" stroke-width="2" style="paint-order:markers stroke fill"/>
+  <path d="m10.5 1.5v3h2.4z" fill="#ececec" style="paint-order:markers stroke fill"/>
+ </g>
+ <g id="folder" stroke="url(#folderStrokeGradient)">
+  <path d="m28.188 8v6h1.3125c.26468 0 .5-.17954.5-.5v-5c0-.31226-.20321-.5-.5-.5z" fill="#f2e287" stroke-width="1.9997" style="paint-order:markers stroke fill"/>
+  <path d="m18.929.99997h8.1418c.51473 0 .92912.41439.92912.92913v12.142c0 .51473-.41439.92912-.92912.92912h-8.1418c-.51473 0-.92912-.41439-.92912-.92912v-12.142c0-.51474.41439-.92913.92912-.92913z" fill="url(#folderGradient)" stroke-width="1.9999" style="paint-order:markers stroke fill"/>
+ </g>
+ <use id="file-inactive" transform="translate(0,32)" width="100%" height="100%" opacity=".5" xlink:href="#file"/>
+ <use id="folder-open" transform="translate(0,16)" width="100%" height="100%" xlink:href="#folder"/>
+ <use id="folder-inactive" transform="translate(0,32)" width="100%" height="100%" opacity=".5" xlink:href="#folder"/>
+</svg>

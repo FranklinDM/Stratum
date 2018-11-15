@@ -45,7 +45,7 @@
 
 /* Trees */
 treechildren::-moz-tree-image(title) {
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg");
   padding-right: 2px;
   margin: 0px 2px;
   width: 16px;
@@ -68,7 +68,7 @@ treechildren::-moz-tree-image(title, separator) {
 }
 
 treechildren::-moz-tree-image(title, container) {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
@@ -103,7 +103,7 @@ treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks) {
 
 /* query-nodes should be styled even if they're not expandable */
 treechildren::-moz-tree-image(title, query) {
-  list-style-image: url("chrome://browser/skin/places/query.png");
+  list-style-image: url("chrome://browser/skin/places/query.svg");
   -moz-image-region: auto;
 }
 
@@ -125,12 +125,12 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
 }
 
 treechildren::-moz-tree-image(title, query, hostContainer) {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 treechildren::-moz-tree-image(title, query, hostContainer, open) {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(16px, 32px, 32px, 16px);
 }
 
@@ -141,7 +141,7 @@ treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
 /* We want some queries to look like ordinary folders. This must come
    after the (title, query) selector, or it would get overridden. */
 treechildren::-moz-tree-image(title, query, folder) {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  list-style-image: url("chrome://global/skin/icons/folder-item.svg");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 

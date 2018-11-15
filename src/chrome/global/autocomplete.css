@@ -113,7 +113,7 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   max-height: 16px;
   margin-inline-start: 0;
   margin-inline-start: 11px;
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.svg");
 }
 
 .ac-site-icon[selected] {

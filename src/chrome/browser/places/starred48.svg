@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="starGradient" x1="24.5" x2="24.5" y1="1080.5" y2="1120.5" gradientTransform="matrix(1.0011 0 0 .99871 0 -1073.1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9f3ac"/>
+      <stop offset="1" stop-color="#ffdc46"/>
+    </linearGradient>
+    <radialGradient id="highlightGradient" cx="16.8" cy="1091.8" r="18" gradientTransform="rotate(45 1122.6 479.9) scale(.85605)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#starGradient)" stroke="#cd9a34" stroke-width="1.5" d="M12.5 35.2c.6-6.7.6-6.7-3-10.2-5.2-5-4.7-6.7 2-7.6 5.6-.7 5.7-.7 8.3-6C21.3 8.2 23 6 24 6c1 0 2.7 2.3 4.3 5.4 2.6 5.4 2.6 5.4 8.2 6.1 6.7.9 7.2 2.5 2 7.5-3.6 3.5-3.6 3.5-3 10.2.8 8 .1 8.4-7 4.2-4.5-2.6-4.5-2.6-9 0-7.1 4.2-7.8 3.7-7-4.2z"/>
+  <path fill="url(#highlightGradient)" d="M13.4 34.3c.6-6.2.6-6.2-2.6-9.4-4.8-4.6-4.4-6.1 1.8-7 5-.6 5.1-.6 7.5-5.5 1.4-2.8 3-4.9 4-4.9.8 0 2.4 2 3.8 5 2.4 5 2.5 5 7.5 5.6 6.2.7 6.6 2.2 1.9 6.8-3.3 3.2-3.3 3.2-2.7 9.4.7 7.2 0 7.6-6.5 3.8-4-2.4-4-2.4-8.2 0-6.5 3.8-7.2 3.4-6.5-3.8z"/>
+</svg>
