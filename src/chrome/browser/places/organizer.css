@@ -84,27 +84,15 @@
 #organizeButton {
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
-#organizeButton:hover,
-#organizeButton[open="true"] {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
-}
 
 /* view button */
 #viewMenu {
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
-#viewMenu:hover,
-#viewMenu[open="true"] {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
 
 /* maintenance button */
 #maintenanceButton {
   -moz-image-region: rect(0px, 48px, 16px, 32px);
-}
-#maintenanceButton:hover,
-#maintenanceButton[open="true"] {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
 }
 
 /* Root View */

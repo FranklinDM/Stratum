@@ -63,18 +63,18 @@
 
 #editBMPanel_folderMenuList[selectedIndex="0"],
 #editBMPanel_toolbarFolderItem {
-  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png") !important;
+  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.svg") !important;
   -moz-image-region: auto !important;
 }
 
 #editBMPanel_folderMenuList[selectedIndex="1"],
 #editBMPanel_bmRootItem {
-  list-style-image: url("chrome://browser/skin/places/bookmarksMenu.png") !important;
+  list-style-image: url("chrome://browser/skin/places/bookmarksMenu.svg") !important;
   -moz-image-region: auto !important;
 }
 
 #editBMPanel_folderMenuList[selectedIndex="2"],
 #editBMPanel_unfiledRootItem {
-  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png") !important;
+  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.svg") !important;
   -moz-image-region: auto !important;
 }
