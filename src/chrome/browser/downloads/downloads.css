@@ -348,6 +348,7 @@ toolbar[brighttext] #downloads-indicator:not([counter]) > #downloads-indicator-a
 #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state"),
                               18, 108, 36, 90) center no-repeat;
+  background-size: 12px;
 }
 
 /*** Download notifications ***/
