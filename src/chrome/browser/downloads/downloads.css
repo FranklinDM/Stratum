@@ -315,19 +315,19 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
 /*** Main indicator icon ***/
 
 #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg"),
                               0, 108, 18, 90) center no-repeat;
   min-width: 18px;
   min-height: 18px;
 }
 
 toolbar[brighttext] #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state-inverted"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.svg"),
                               0, 108, 18, 90) center no-repeat;
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg"),
                               18, 108, 36, 90) center no-repeat;
 }
 
@@ -335,18 +335,18 @@ toolbar[brighttext] #downloads-indicator-icon {
    equivalent to -moz-any([progress], [paused]). */
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg"),
                               0, 108, 18, 90) center no-repeat;
   background-size: 12px;
 }
 
 toolbar[brighttext] #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state-inverted"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.svg"),
                               0, 108, 18, 90) center no-repeat;
 }
 
 #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg#state"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.svg"),
                               18, 108, 36, 90) center no-repeat;
   background-size: 12px;
 }
