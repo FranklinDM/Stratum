@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="14" viewBox="0 0 56 14">
+  <defs>
+    <radialGradient id="radialGradient4975" cx="29.163" cy="10.925" r="6.481" gradientTransform="matrix(.79357 0 0 .9258 25.935 -.714)" gradientUnits="userSpaceOnUse">
+      <stop offset=".05" stop-color="#003900" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#002601" stop-opacity=".761"/>
+    </radialGradient>
+    <radialGradient id="radialGradient4977" cx="45" cy="11.6" r="6.5" gradientTransform="translate(.385 .077) scale(.76923)" gradientUnits="userSpaceOnUse">
+      <stop offset=".05" stop-color="#370600" stop-opacity=".722"/>
+      <stop offset="1" stop-color="#300500" stop-opacity=".812"/>
+    </radialGradient>
+    <radialGradient id="radialGradient4979" cx="64.859" cy="11.371" r="6.745" gradientTransform="matrix(.81537 0 0 .8895 -46.385 -.714)" gradientUnits="userSpaceOnUse" xlink:href="#radialGradient5023">
+      <stop offset=".05" stop-color="#87939b"/>
+      <stop offset="1" stop-color="#5b707d"/>
+    </radialGradient>
+    <radialGradient id="radialGradient5023" cx="64.859" cy="11.371" r="6.745" gradientTransform="matrix(.81537 0 0 .8895 -32.385 -.714)" gradientUnits="userSpaceOnUse">
+      <stop offset=".05" stop-color="#87939b"/>
+      <stop offset="1" stop-color="#072342" stop-opacity=".745"/>
+    </radialGradient>
+    <filter id="filter1053" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#FFF" flood-opacity=".8" result="flood"/>
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+      <feGaussianBlur in="composite1" result="blur"/>
+      <feOffset dy="1" result="offset"/>
+      <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+    </filter>
+  </defs>
+  <path id="reload" fill="url(#radialGradient4979)" d="M12 7H6.077l2.37-2.4C7.853 4.171 7.261 4 6.5 4 4.638 4 3.115 5.543 3.115 7.429s1.523 3.428 3.385 3.428c1.184 0 2.285-.6 2.876-1.628l1.947.857C10.391 11.8 8.615 13 6.5 13 3.453 13 1 10.514 1 7.429s2.453-5.572 5.5-5.572c1.27 0 2.453.429 3.47 1.2L12 1z"/>
+  <g id="main-set" filter="url(#filter1053)">
+    <path id="reload-active" fill="url(#radialGradient5023)" d="M26 7h-5.923l2.37-2.4c-.593-.429-1.185-.6-1.947-.6-1.862 0-3.385 1.543-3.385 3.429s1.523 3.428 3.385 3.428c1.184 0 2.285-.6 2.876-1.628l1.947.857C24.391 11.8 22.615 13 20.5 13c-3.047 0-5.5-2.486-5.5-5.571s2.453-5.572 5.5-5.572c1.27 0 2.453.429 3.47 1.2L26 1z"/>
+    <path id="stop" fill="url(#radialGradient4977)" d="M40 3.654L36.718 6.96 40 10.268l-1.64 1.654L35 8.693 31.718 12l-1.64-1.654 3.281-3.386L30 3.653 31.64 2 35 5.308 38.282 2z"/>
+    <path id="forward" fill="url(#radialGradient4975)" d="M44.192 8.457c.202.202.6.257.6.257h4.286l-1.828 1.788c-.445.435-.51 1.091-.17 1.455l.68.819c.34.363.935.272 1.36-.182l4.59-5.002.51-.638-.51-.636-4.504-4.911c-.426-.456-1.02-.546-1.36-.182l-.681.818c-.34.365-.255 1 .17 1.456l1.743 1.787h-4.286s-.398.055-.6.257c-.202.202-.257.6-.257.6v1.714s.055.398.257.6z"/>
+  </g>
+</svg>
