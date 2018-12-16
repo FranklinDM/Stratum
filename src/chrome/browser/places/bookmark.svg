@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="16" viewBox="0 0 48 16">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="0 0 48 16">
   <defs>
-    <linearGradient id="bm-none" x1="375.4" x2="375.4" y1="-1106.9" y2="-1085.9" gradientTransform="translate(-359.4 1097.9)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c9c9c9"/>
-      <stop offset="1" stop-color="#fff"/>
-    </linearGradient>
     <filter id="filter2164" color-interpolation-filters="sRGB">
       <feFlood result="flood"/>
       <feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1"/>
@@ -11,12 +7,8 @@
       <feOffset result="offset"/>
       <feComposite in="offset" in2="SourceGraphic" operator="atop" result="composite2"/>
     </filter>
-    <linearGradient id="linearGradient903" x1="39.939" x2="39.939" y1="7.335" y2="12.22" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fbbe30"/>
-      <stop offset="1" stop-color="#fbe366"/>
-    </linearGradient>
     <filter id="filter1145" color-interpolation-filters="sRGB">
-      <feFlood flood-color="#CBA110" result="flood"/>
+      <feFlood flood-color="#FDC60A" result="flood"/>
       <feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1"/>
       <feGaussianBlur in="composite1" result="blur" stdDeviation="1.18"/>
       <feOffset result="offset"/>
@@ -32,13 +24,17 @@
     <filter id="filter1168-9" color-interpolation-filters="sRGB">
       <feFlood flood-color="#966000" result="flood"/>
       <feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1"/>
-      <feGaussianBlur in="composite1" result="blur" stdDeviation="1"/>
+      <feGaussianBlur in="composite1" result="blur" stdDeviation="1.5"/>
       <feOffset result="offset"/>
       <feComposite in="offset" in2="SourceGraphic" operator="in" result="composite2"/>
     </filter>
+    <radialGradient id="radialGradient6405" cx="40" cy="-6.409" r="9.6" gradientTransform="matrix(1.7954 0 0 .82966 -31.817 17.317)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbe366"/>
+      <stop offset="1" stop-color="#f4b228"/>
+    </radialGradient>
   </defs>
-  <path id="bookmark-active" fill="url(#linearGradient903)" stroke-width="0" d="M34.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376 2.466-.307 2.485-.321 3.652-2.695C38.808.998 39.593 0 40.003 0c.41 0 1.198 1.004 1.888 2.406 1.177 2.396 1.195 2.408 3.652 2.715 3.005.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.161-1.844z" filter="url(#filter1168)"/>
-  <path id="bookmark-active-overlay" fill="#fbbe30" stroke-width="0" d="M34.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376 2.466-.307 2.485-.321 3.652-2.695C38.808.998 39.593 0 40.003 0c.41 0 1.198 1.004 1.888 2.406 1.177 2.396 1.195 2.408 3.652 2.715 3.005.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.161-1.844z" filter="url(#filter1168-9)"/>
-  <path id="bookmark-none" fill="url(#bm-none)" stroke-width="0" d="M2.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376C4.94 4.774 4.96 4.76 6.126 2.386 6.808.998 7.593 0 8.003 0c.41 0 1.198 1.004 1.888 2.406 1.178 2.396 1.195 2.408 3.652 2.715 3.006.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.16-1.844z" filter="url(#filter2164)"/>
-  <path id="bookmark-hover" fill="url(#bm-none)" stroke-width="0" d="M18.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376 2.466-.307 2.485-.321 3.652-2.695C22.808.998 23.593 0 24.003 0c.41 0 1.198 1.004 1.888 2.406 1.178 2.396 1.195 2.408 3.652 2.715 3.005.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.161-1.844z" filter="url(#filter1145)"/>
+  <path id="bookmark-active" fill="url(#radialGradient6405)" stroke-width="0" d="M34.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376 2.466-.307 2.485-.321 3.652-2.695C38.808.998 39.593 0 40.003 0s1.198 1.004 1.888 2.406c1.177 2.396 1.195 2.408 3.652 2.715 3.005.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.161-1.844z" filter="url(#filter1168)"/>
+  <path id="bookmark-active-overlay" fill="#fbbe30" stroke-width="0" d="M34.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376 2.466-.307 2.485-.321 3.652-2.695C38.808.998 39.593 0 40.003 0s1.198 1.004 1.888 2.406c1.177 2.396 1.195 2.408 3.652 2.715 3.005.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.161-1.844z" filter="url(#filter1168-9)"/>
+  <path id="bookmark-none" fill="#f1f1f1" stroke-width="0" d="M2.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376C4.94 4.774 4.96 4.76 6.126 2.386 6.808.998 7.593 0 8.003 0c.41 0 1.198 1.004 1.888 2.406 1.178 2.396 1.195 2.408 3.652 2.715 3.006.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.16-1.844z" filter="url(#filter2164)"/>
+  <path id="bookmark-hover" fill="#f1f1f1" stroke-width="0" d="M18.872 12.983c.299-2.996.299-2.996-1.29-4.526-2.33-2.244-2.13-3 .891-3.376 2.466-.307 2.485-.321 3.652-2.695C22.808.998 23.593 0 24.003 0s1.198 1.004 1.888 2.406c1.178 2.396 1.195 2.408 3.652 2.715 3.005.374 3.198 1.104.881 3.336-1.588 1.53-1.588 1.53-1.29 4.526.352 3.525.032 3.71-3.16 1.844-1.97-1.152-1.97-1.152-3.941 0-3.193 1.867-3.512 1.68-3.161-1.844z" filter="url(#filter1145)"/>
 </svg>
