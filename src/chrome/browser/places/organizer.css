@@ -77,7 +77,7 @@
 #organizeButton, 
 #viewMenu, 
 #maintenanceButton {
-  list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
+  list-style-image: url("chrome://browser/skin/places/libraryToolbar.svg");
 }
 
 /* organize button */
