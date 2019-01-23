@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.4.3
+- Add tab audio indicator (for Pale Moon 28.3+)
+- Remove remnants of web apps
+- Minor adjustments to in-content style
+
 ### 1.4.2
 - Additional fixes
 	- Fix all tabs button appearance (no thumbnails/list mode)
