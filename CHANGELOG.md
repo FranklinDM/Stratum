@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.4
+- Only use white audio indicator when using a lightweight theme
+
 ### 1.4.3
 - Add tab audio indicator (for Pale Moon 28.3+)
 - Remove remnants of web apps
