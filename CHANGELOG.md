@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.5
+- Add style for reader and narrator components
+
 ### 1.4.4
 - Only use white audio indicator when using a lightweight theme
 
