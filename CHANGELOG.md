@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.4.6
+- Initial support for Pale Moon 29
+
 ### 1.4.5
 - Add style for reader and narrator components
 
