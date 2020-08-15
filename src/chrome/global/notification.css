@@ -30,6 +30,11 @@ notification[type="critical"] {
   background-image: linear-gradient(rgb(212,0,0), rgb(152,0,0));
 }
 
+/* Override incorrect styling of notification bars with 'outset' class */
+.notification-inner.outset {
+  border: none !important;
+}
+
 .messageText > .text-link {
   color: inherit !important;
   text-decoration: underline;
