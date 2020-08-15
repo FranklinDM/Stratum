@@ -1,5 +1,26 @@
-skin	global			stratum		chrome/global/
-skin	browser			stratum		chrome/browser/
-skin	mozapps			stratum		chrome/mozapps/
-skin	abouthome 		stratum 	chrome/abouthome/
+#------------------------------------------------------------------------------
+# Toolkit
+#------------------------------------------------------------------------------
+skin    global                  stratum        chrome/global/
+skin    mozapps                 stratum        chrome/mozapps/
 
+#------------------------------------------------------------------------------
+# Application
+#------------------------------------------------------------------------------
+skin    browser                 stratum        chrome/browser/
+skin    abouthome               stratum     chrome/abouthome/
+
+#------------------------------------------------------------------------------
+# OS-specific skin
+#------------------------------------------------------------------------------
+# Fallback skin for unmatched systems
+skin    os_target               stratum        chrome/os_target/windows/
+
+# Skin content overrides
+skin    os_target               stratum        chrome/os_target/windows/     os=WINNT
+skin    os_target               stratum        chrome/os_target/mac/         os=Darwin
+skin    os_target               stratum        chrome/os_target/linux/       os=Linux
+
+#------------------------------------------------------------------------------
+# Overrides
+#------------------------------------------------------------------------------
