@@ -43,13 +43,23 @@ body {
   outline: 1px dotted;
 }
 
-
-#newtab-undo-close-button > .toolbarbutton-text {
-  display: none;
+#newtab-undo-close-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+  width: 16px;
+  height: 16px;
+  float: right;
+  right: 0;
+  background: url("chrome://global/skin/icons/close.png");
 }
 
-#newtab-undo-close-button:-moz-focusring {
-  outline: 1px dotted;
+#newtab-undo-close-button:hover {
+  background-position: -16px 0;
+}
+
+#newtab-undo-close-button:hover:active {
+  background-position: -32px 0;
 }
 
 /* TOGGLE */
@@ -225,13 +235,6 @@ body {
 
 .newtab-undo-button > .button-box {
   padding: 0;
-}
-
-#newtab-undo-close-button {
-  -moz-appearance: none;
-  padding: 0;
-  border: none;
-  -moz-user-focus: normal;
 }
 
 #searchLogoContainer > * {
