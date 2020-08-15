@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.5.0
+- Restore missing close button in the undo pop-up of the new tab page
+- Fix new tab thumbnail appearance when using placeholders
+- Improve appearance of sync notifications
+- Initial support for Mac OS (untested)
+
 ### 1.4.6
 - Initial support for Pale Moon 29
 
