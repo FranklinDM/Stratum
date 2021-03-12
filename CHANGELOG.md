@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.6.0
+- Add mixed-mode SSL styling
+- Limit the width of the identity panel pop-up when in mixed-mode state
+- Fix invisible comment/URL/action text in the location bar
+- Fix incorrect replacements of prefixed properties
+
 ### 1.5.0
 - Restore missing close button in the undo pop-up of the new tab page
 - Fix new tab thumbnail appearance when using placeholders
