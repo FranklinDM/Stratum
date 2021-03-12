@@ -1351,7 +1351,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
   box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset;  
 }
 
@@ -1361,6 +1362,10 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   background-color: hsl(219,45%,60%);
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.mixedContent {
+  background-color: hsl(50,100%,48%);
 }
 
 #identity-box:-moz-focusring {
