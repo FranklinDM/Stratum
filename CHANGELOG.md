@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.6.1
+- Revert "Limit the width of the identity panel pop-up when in mixed-mode state"
+
 ### 1.6.0
 - Add mixed-mode SSL styling
 - Limit the width of the identity panel pop-up when in mixed-mode state
