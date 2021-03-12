@@ -95,12 +95,12 @@
 }
 
 #main-window[privatebrowsingmode=temporary][inFullscreen] #nav-bar[tabsontop=false] {
-  -moz-padding-end: 50px !important;
+  padding-inline-end: 50px !important;
 }
 
 @media (-moz-mac-lion-theme) {
   #main-window[privatebrowsingmode=temporary][inFullscreen] #TabsToolbar[tabsontop=true] {
-    -moz-padding-end: 50px;
+    padding-inline-end: 50px;
   }
 }
 
@@ -110,6 +110,6 @@
   }
 
   #main-window[privatebrowsingmode=temporary][inFullscreen][tabsontop=true] #window-controls {
-    -moz-padding-end: 50px;
+    padding-inline-end: 50px;
   }
 }

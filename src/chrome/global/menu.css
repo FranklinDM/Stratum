@@ -89,7 +89,7 @@ menucaption > .menu-iconic-text {
 .menu-iconic-accel {
   color: inherit;
   margin-inline-start: 0.74em !important;
-  margin-inline-start: 1.35em !important;
+  margin-inline-end: 1.35em !important;
 }
 
 .menu-iconic-left {
@@ -112,7 +112,7 @@ menuitem.menuitem-iconic > .menu-iconic-left,
 
 .menu-right {
   -moz-appearance: menuarrow;
-  margin-inline-start: -2px;
+  margin-inline-end: -2px;
   list-style-image: none;
   min-width: 1.28em;
   padding-top: 1px;

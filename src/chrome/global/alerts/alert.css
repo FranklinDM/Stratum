@@ -34,14 +34,14 @@
   /* The close button is larger on Windows and has a large
      circle around it, so we add more space between the close
      button and the edge of the window. */
-  margin-inline-start: 2px;
+  margin-inline-end: 2px;
 }
 
 #alertSettings {
   /* The close button is larger on Windows, so the
      gear button is moved over to accomodate it and
      keep the two buttons horizontally aligned together. */
-  margin-inline-start: 5px;
+  margin-inline-end: 5px;
 }
 
 @media (-moz-windows-default-theme) {

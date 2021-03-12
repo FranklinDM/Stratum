@@ -162,7 +162,7 @@ xul|groupbox xul|label:not(.menu-accel):not(.menu-text):not(.indent),
 xul|groupbox xul|description {
   /* !important needed to override toolkit !important rule */
   margin-inline-start: 0 !important;
-  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 /* tabpanels and tabs */
@@ -295,7 +295,7 @@ xul|menulist > xul|*.menulist-label-box {
 }
 
 xul|menulist > xul|*.menulist-label-box > xul|*.menulist-icon[src] {
-  margin-inline-start: 5px;
+  margin-inline-end: 5px;
 }
 
 xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
@@ -312,7 +312,7 @@ xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
 
 xul|*.help-button {
   min-width: 16px;
-  margin-inline-start: 0;
+  margin-inline-end: 0;
   border-width: 0;
   background-image: none;
   box-shadow: none;
@@ -373,7 +373,7 @@ html|*.help-button:hover:active {
 xul|*.spinbuttons-button {
   min-height: initial;
   margin-inline-start: 10px !important;
-  margin-inline-start: 2px !important;
+  margin-inline-end: 2px !important;
 }
 
 xul|*.spinbuttons-up {
@@ -408,7 +408,7 @@ xul|*.spinbuttons-down[disabled="true"] > xul|*.button-box > xul|*.button-icon {
 
 xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
   -moz-appearance: none;
-  margin-inline-start: 4px;
+  margin-inline-end: 4px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -585,7 +585,7 @@ html|input[type="checkbox"] + html|label:before {
   height: 23px;
   border-radius: 2px;
   border: 1px solid var(--in-content-box-border-color);
-  margin-inline-start: 10px;
+  margin-inline-end: 10px;
   background-color: #f1f1f1;
   /* !important needed to override toolkit checked !important rule */
   background-image: linear-gradient(#fff, rgba(255,255,255,0.8)) !important;
@@ -636,7 +636,7 @@ xul|*.radio-check {
   height: 23px;
   border: 1px solid var(--in-content-box-border-color);
   border-radius: 50%;
-  margin-inline-start: 10px;
+  margin-inline-end: 10px;
   background-color: #f1f1f1;
   background-image: linear-gradient(#fff, rgba(255,255,255,0.80));
   box-shadow: 0 1px 1px 0 #fff, inset 0 2px 0 0 rgba(0,0,0,0.03);
@@ -656,7 +656,7 @@ xul|radio[disabled="true"] > xul|*.radio-check {
 
 xul|*.radio-label-box {
   margin-inline-start: -1px; /* negative margin for the transparent border */
-  margin-inline-start: 10px;
+  margin-inline-end: 10px;
   padding-inline-start: 0;
 }
 
@@ -724,7 +724,7 @@ xul|*.radio-label-box {
 
 *|*.header {
   border-bottom: 1px solid var(--in-content-header-border-color);
-  margin-inline-start: 4px; /* add the 4px end-margin of other elements */
+  margin-inline-end: 4px; /* add the 4px end-margin of other elements */
   margin-bottom: 15px;
   padding-bottom: 15px;
   -moz-box-align: baseline;
@@ -753,7 +753,7 @@ xul|*.fileFieldContentBox {
 
 xul|*.fileFieldIcon {
   margin-inline-start: 10px;
-  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 xul|*.fileFieldLabel {
@@ -935,7 +935,7 @@ xul|radio {
 
 xul|*.radio-icon,
 xul|*.checkbox-icon {
-  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 /* Never draw a border for the focusring, use outline instead */

@@ -103,7 +103,7 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   max-width: 16px;
   max-height: 16px;
   margin-inline-start: 14px;
-  margin-inline-start: 6px;
+  margin-inline-end: 6px;
 }
 
 .ac-site-icon {
@@ -112,7 +112,7 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   max-width: 16px;
   max-height: 16px;
   margin-inline-start: 0;
-  margin-inline-start: 11px;
+  margin-inline-end: 11px;
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
@@ -131,22 +131,22 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
 
 .ac-title {
   margin-inline-start: 0;
-  margin-inline-start: 6px;
+  margin-inline-end: 6px;
 }
 
 html|span.ac-tag {
   margin-inline-start: 0;
-  margin-inline-start: 2px;
+  margin-inline-end: 2px;
 }
 
 .ac-tags {
   margin-inline-start: 0;
-  margin-inline-start: 4px;
+  margin-inline-end: 4px;
 }
 
 .ac-separator {
   margin-inline-start: 0;
-  margin-inline-start: 6px;
+  margin-inline-end: 6px;
 }
 
 /* Better align the URL/action with the title. */
