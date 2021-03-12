@@ -2293,7 +2293,7 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   margin: 4px 0 2px;
 }
 
-#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption,
+#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption ,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption {
   margin-top: 10px;
   margin-inline-start: -24px;
@@ -2302,10 +2302,6 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 #identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption > vbox > #identity-popup-encryption-icon {
   list-style-image: url("chrome://browser/skin/Secure24.png");
-}
-
-#identity-popup-content-box.mixedContent > #identity-popup-encryption {
-  max-width: 300px;
 }
 
 #identity-popup-more-info-button {
