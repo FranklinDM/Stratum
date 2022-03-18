@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.7.0
+- Initial support for Pale Moon 30
+
 ### 1.6.1
 - Revert "Limit the width of the identity panel pop-up when in mixed-mode state"
 
