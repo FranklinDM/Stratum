@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.7.4
+- Initial support for Pale Moon 33
+
 ### 1.7.3
 - Add missing HTML 5 date/time picker widget styles
 
