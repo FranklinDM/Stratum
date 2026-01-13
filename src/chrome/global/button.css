@@ -147,7 +147,8 @@ button[type="disclosure"][open="true"] {
   list-style-image: url("chrome://global/skin/tree/twisty.svg#open");
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   button[type="disclosure"] {
     list-style-image: url("chrome://global/skin/tree/twisty-10.svg#clsd");
   }

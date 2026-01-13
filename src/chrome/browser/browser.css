@@ -2722,7 +2722,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   background-repeat: no-repeat;    
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   /* Remove gradient and make border faded */
   #addon-bar:not(:-moz-lwtheme) {
     border-top: 1px solid rgba(10%,10%,10%,.2);
@@ -2979,7 +2980,8 @@ notificationbox[id="sync-notifications"] > notification {
   }
 
   @media (-moz-os-version: windows-win8),
-         (-moz-os-version: windows-win10) {
+         (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     :root {
       --toolbar-custom-color: hsl(210,0%,92%);
     }
@@ -3045,10 +3047,11 @@ notificationbox[id="sync-notifications"] > notification {
     -moz-appearance: -moz-win-exclude-glass;
   }
 
-/* ==== Windows 10 styling ==== */
+/* ==== Windows 10/11 styling ==== */
 
-  @media (-moz-os-version: windows-win10) {
-    /* Draw XUL caption buttons and background on Win10 */
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
+    /* Draw XUL caption buttons and background on Win10/11 */
     @media (-moz-windows-accent-color-applies: 0) {
       /* Default styling for when no accent color is applied */
       #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
@@ -3430,7 +3433,7 @@ notificationbox[id="sync-notifications"] > notification {
     
   }
  
-/* ==== Windows 8/10 (flat color) styling ==== */
+/* ==== Windows 8/10/11 (flat color) styling ==== */
 
   @media (-moz-os-version: windows-win8) {
     /* Use a light text styling on dark window frames */
@@ -3440,7 +3443,8 @@ notificationbox[id="sync-notifications"] > notification {
   }
   
   @media (-moz-os-version: windows-win8),
-         (-moz-os-version: windows-win10) {
+         (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     /* Fade text stylings on window inactivity */
     :root:not(:-moz-lwtheme):-moz-window-inactive {
       --window-text-color: ThreeDShadow;
@@ -3559,7 +3563,8 @@ notificationbox[id="sync-notifications"] > notification {
     background-image: linear-gradient(var(--toolbar-highlight-top), var(--toolbar-highlight-bottom));
   }
   
-  @media (-moz-os-version: windows-win10) {
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     /* Remove gradient and make border faded */
     #navigator-toolbox[tabsontop=false] > #PersonalToolbar:not(:-moz-lwtheme) {
       border-top: 1px solid rgba(10%,10%,10%,.2);

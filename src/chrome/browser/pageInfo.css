@@ -150,7 +150,8 @@ groupbox tree {
   line-height: 2em;
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   groupbox.collapsable caption .caption-icon {
     background-image: url("chrome://global/skin/tree/twisty-10.svg#open");
   }

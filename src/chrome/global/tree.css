@@ -396,7 +396,8 @@ treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(hover, open) {
   list-style-image: url("chrome://global/skin/tree/twisty.svg#open-hover-rtl");
 }
 
-@media (-moz-os-version: windows-win10) {
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
   treechildren::-moz-tree-twisty {
     list-style-image: url("chrome://global/skin/tree/twisty-10.svg#clsd");
   }
