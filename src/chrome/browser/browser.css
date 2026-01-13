@@ -688,12 +688,12 @@ toolbar[brighttext] .toolbarbutton-1 {
 .toolbarbutton-1[disabled=true] > .toolbarbutton-menubutton-dropmarker,
 .toolbarbutton-1[disabled=true] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 .toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled] > .toolbarbutton-icon,
-#navigator-toolbox:-moz-any([mode=text],[mode=full]) > #nav-bar .toolbarbutton-1[disabled=true] {
+#navigator-toolbox:is([mode=text],[mode=full]) > #nav-bar .toolbarbutton-1[disabled=true] {
   opacity: .4;
 }
 
 /* don't apply opacity when in text/full icon mode, only the button container should have lower opacity */
-#navigator-toolbox:-moz-any([mode=text],[mode=full]) > #nav-bar .toolbarbutton-1[disabled=true] > :-moz-any(.toolbarbutton-icon, .toolbarbutton-menu-dropmarker, .toolbarbutton-menubutton-dropmarker)  {
+#navigator-toolbox:is([mode=text],[mode=full]) > #nav-bar .toolbarbutton-1[disabled=true] > :is(.toolbarbutton-icon, .toolbarbutton-menu-dropmarker, .toolbarbutton-menubutton-dropmarker)  {
   opacity: 1;
 }
 
@@ -736,13 +736,13 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 /* Enforce arbitrary 24px (icons) & 18px (others) height for toolbar icons */
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-icon,
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
   height: 24px;
 }
 
-#navigator-toolbox > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-icon,
-#navigator-toolbox > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+#navigator-toolbox > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-icon,
+#navigator-toolbox > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #alltabs-button, #new-tab-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
   height: 18px;
 }
 
@@ -758,7 +758,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding-right: 5px;
 }
 
-#navigator-toolbox:-moz-any([iconsize=small], [mode=full], [mode=text]) > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #alltabs-button, #new-tab-button)) {
+#navigator-toolbox:is([iconsize=small], [mode=full], [mode=text]) > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #alltabs-button, #new-tab-button)) {
   margin: 2px;
 }
 
@@ -813,9 +813,9 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
               box-shadow var(--toolbarbutton-transition-duration) var(--toolbarbutton-transition-timingfunction);
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #webrtc-status-button)) > .toolbarbutton-icon,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #webrtc-status-button)) > .toolbarbutton-badge-stack,
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #webrtc-status-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #webrtc-status-button)) > .toolbarbutton-icon,
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #webrtc-status-button)) > .toolbarbutton-badge-stack,
+#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar .toolbarbutton-1:not(:is(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #alltabs-button, #webrtc-status-button)) > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
   padding: 3px 7px;
 }
 
@@ -847,8 +847,8 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-stack,
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#navigator-toolbox:not([mode=icons]) > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any(:hover,[open]) > .toolbarbutton-menubutton-button,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):is(:hover,[open]) > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#navigator-toolbox:not([mode=icons]) > #nav-bar .toolbarbutton-1:not([disabled]):is(:hover,[open]) > .toolbarbutton-menubutton-button,
 #navigator-toolbox > #nav-bar .toolbarbutton-1:not([disabled]):hover > .toolbarbutton-menubutton-dropmarker,
 #navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):not([checked]):not([open]):not(:active):hover,
 #navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):hover,
@@ -872,13 +872,13 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
               0 0 3.5px hsl(190,90%,80%);
 }
 
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-icon,
-#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):-moz-any([open],[checked],:hover:active) > .toolbarbutton-badge-stack,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):is([open],[checked],:hover:active) > .toolbarbutton-icon,
+#navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1:not([disabled]):is([open],[checked],:hover:active) > .toolbarbutton-badge-stack,
 #navigator-toolbox[mode=icons] > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active > .toolbarbutton-icon,
 #navigator-toolbox:not([mode=icons]) > #nav-bar .toolbarbutton-1 > .toolbarbutton-menubutton-button:not([disabled]):hover:active,
 #navigator-toolbox > #nav-bar .toolbarbutton-1[open] > .toolbarbutton-menubutton-dropmarker:not([disabled]),
-#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):-moz-any([open],[checked],:hover:active),
-#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):-moz-any([open],[checked],:hover:active)  {
+#navigator-toolbox[mode=full] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):is([open],[checked],:hover:active),
+#navigator-toolbox[mode=text] > #nav-bar .toolbarbutton-1:not([type=menu-button]):not([disabled]):is([open],[checked],:hover:active)  {
   background-color: transparent;
   border-color: rgba(0,0,0,.65) rgba(0,0,0,.55) rgba(0,0,0,.5);
   box-shadow: 0 0 6.5px rgba(0,0,0,.4) inset,
@@ -887,7 +887,7 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   text-shadow: none;
 }
 
-#navigator-toolbox > #nav-bar .toolbarbutton-1:-moz-any(:hover,[open]) > .toolbarbutton-menubutton-dropmarker:not([disabled]) {
+#navigator-toolbox > #nav-bar .toolbarbutton-1:is(:hover,[open]) > .toolbarbutton-menubutton-dropmarker:not([disabled]) {
   -moz-border-start-color: hsla(210,54%,20%,.35);
 }
 
@@ -898,8 +898,8 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   transition: background-color var(--toolbarbutton-transition-duration) var(--toolbarbutton-transition-timingfunction);
 }
 
-:-moz-any(#TabsToolbar, #addon-bar) .toolbarbutton-1,
-:-moz-any(#TabsToolbar, #addon-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,
+:is(#TabsToolbar, #addon-bar) .toolbarbutton-1,
+:is(#TabsToolbar, #addon-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-appearance: none;
@@ -947,11 +947,11 @@ toolbar[mode=full] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   transform: scaleX(-1);
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button {
   -moz-box-align: center;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > .toolbarbutton-1:-moz-any([disabled],:not([disabled]):not([open]):not(:active)) > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > .toolbarbutton-1:is([disabled],:not([disabled]):not([open]):not(:active)) > .toolbarbutton-icon {
   background-image: linear-gradient(rgba(251,252,253,.97), rgba(246,247,248,.5) 49%, 
                                     rgba(231,232,233,.45) 51%, rgba(225,226,229,.2));
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3) inset,
@@ -959,15 +959,15 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 			  -1px 0.5px 0px 1px rgba(0, 0, 0, 0.15);
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button {
   padding: 0;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button > menupopup {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button > menupopup {
   margin-top: 1px;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button > .toolbarbutton-icon {
   clip-path: url(chrome://browser/content/browser.xul#windows-keyhole-forward-clip-path);
   margin-inline-start: -6px !important;
   border-left-style: none;
@@ -981,21 +981,21 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 #navigator-toolbox[iconsize=small] #back-button,
 #navigator-toolbox[iconsize=small][mode=icons] #back-button > .toolbarbutton-icon,
-#navigator-toolbox:-moz-any([mode=full], [mode=text]) #back-button {
+#navigator-toolbox:is([mode=full], [mode=text]) #back-button {
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
   margin-left: 1px;
 }
 
-#navigator-toolbox:-moz-any([mode=full], [mode=text]) #back-button,
-#navigator-toolbox:-moz-any([mode=full], [mode=text]) #forward-button {
+#navigator-toolbox:is([mode=full], [mode=text]) #back-button,
+#navigator-toolbox:is([mode=full], [mode=text]) #forward-button {
   margin-top: 2px;
   margin-bottom: 2px;
 }
 
 #navigator-toolbox[iconsize=small] #forward-button,
 #navigator-toolbox[iconsize=small][mode=icons] #forward-button > .toolbarbutton-icon,
-#navigator-toolbox:-moz-any([mode=full], [mode=text]) #forward-button {
+#navigator-toolbox:is([mode=full], [mode=text]) #forward-button {
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
   margin-left: -1px;
@@ -1005,24 +1005,24 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   margin-left: 0px;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"]:not([currentset*="unified-back-forward-button,urlbar-container"]),#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:-moz-locale-dir(ltr) > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"]:not([currentset*="unified-back-forward-button,urlbar-container"]),#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:-moz-locale-dir(ltr) > .toolbarbutton-icon {
   border-top-right-radius: var(--toolbarbutton-border-radius);
   border-bottom-right-radius: var(--toolbarbutton-border-radius);
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"]:not([currentset*="unified-back-forward-button,urlbar-container"]),#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"]:not([currentset*="unified-back-forward-button,urlbar-container"]),#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #forward-button:not([disabled]):not([open]):not(:active):hover > .toolbarbutton-icon {
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
               0 0 0 2px rgba(255,255,255,.1) inset,
               0 1px 0px rgba(0,0,0,.1),
               0 0 5px 1px hsl(190,90%,80%);
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button {
   -moz-image-region: rect(18px, 20px, 38px, 0);
   padding-top: 3px;
   padding-bottom: 3px;
@@ -1033,15 +1033,15 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   border-radius: 0 10000px 10000px 0;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:-moz-locale-dir(rtl) {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:-moz-locale-dir(rtl) {
   border-radius: 10000px 0 0 10000px;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button > menupopup {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button > menupopup {
   margin-top: -1px;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button > .toolbarbutton-icon {
   border-radius: 10000px;
   padding: 5px;
   border: none;
@@ -1055,7 +1055,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
               1px 2px 1px rgba(0,0,0,.2);
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:not([disabled="true"]):not([open="true"]):not(:active):hover > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:not([disabled="true"]):not([open="true"]):not(:active):hover > .toolbarbutton-icon {
   box-shadow: 0 0 0 1px rgba(255,255,255,.3) inset,
               0 0 0 2px rgba(255,255,255,.1) inset,
               0 0 0 1px hsla(190,50%,40%,.3),
@@ -1065,8 +1065,8 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
               0 0 5px 1px hsl(190,90%,80%);			  
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button[open="true"] > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button > #back-button[open="true"] > .toolbarbutton-icon {
   box-shadow: 0 0 6.5px rgba(0,0,0,.4) inset,
               0 0 2px rgba(0,0,0,.4) inset,
               0 0 0 1px rgba(0,0,0,.65),
@@ -1374,8 +1374,8 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
 }
 
 /* Make the padlock icon white on valid sites */
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity :-moz-any(#padlock-ib, #padlock-ib-left),
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain :-moz-any(#padlock-ib, #padlock-ib-left) {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity :is(#padlock-ib, #padlock-ib-left),
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain :is(#padlock-ib, #padlock-ib-left) {
   filter: brightness(0%) invert(100%) drop-shadow(0px 0px 1px rgba(0,0,0,.2)) !important;
 }
 
@@ -1419,7 +1419,7 @@ html|*.urlbar-input:-moz-lwtheme::-moz-placeholder,
   -moz-image-region: rect(0px, 16px, 16px, 0px)
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar > #identity-box > #page-proxy-favicon {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button + #urlbar-container > #urlbar > #identity-box > #page-proxy-favicon {
   margin-inline-end: 1px;
 }
 
@@ -1738,7 +1738,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
    vertically centered between the tabs and the AppMenu button
    when the tabs are not on top and the Bookmarks toolbar is
    disabled */
-#nav-bar + #customToolbars + #PersonalToolbar:-moz-any([collapsed=true],[moz-collapsed=true]) + #TabsToolbar[tabsontop=false] {
+#nav-bar + #customToolbars + #PersonalToolbar:is([collapsed=true],[moz-collapsed=true]) + #TabsToolbar[tabsontop=false] {
   margin-top: 1px;
 }
 
@@ -2104,8 +2104,8 @@ toolbar[brighttext] #alltabs-button {
   -moz-image-region: auto;
 }
 
-:-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
-:-moz-any(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
+:is(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
+:is(#TabsToolbar, #nav-bar[tabsontop=false], #toolbar-menubar) > toolbarpaletteitem > #alltabs-button[type=menu]:-moz-system-metric(windows-compositor):not(:-moz-lwtheme),
 toolbar[brighttext] #alltabs-button[type="menu"] {
   list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png");
 }
@@ -2414,7 +2414,7 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   margin-inline-end: -8px;
 }
 
-window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar > #notification-popup-box {
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :is(#nav-bar[currentset*="unified-back-forward-button"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar > #notification-popup-box {
   padding-left: 5px;
 }
 
@@ -3462,7 +3462,7 @@ notificationbox[id="sync-notifications"] > notification {
   #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme),
   #nav-bar[tabsontop=false]:not(:-moz-lwtheme),
   #nav-bar[tabsontop=false]:not(:-moz-lwtheme) .toolbarbutton-text,
-  #nav-bar + #customToolbars + #PersonalToolbar:-moz-any([collapsed=true],[moz-collapsed=true]) + #TabsToolbar[tabsontop=false]:last-child:not(:-moz-lwtheme) {
+  #nav-bar + #customToolbars + #PersonalToolbar:is([collapsed=true],[moz-collapsed=true]) + #TabsToolbar[tabsontop=false]:last-child:not(:-moz-lwtheme) {
     background-color: transparent !important;
     color: var(--window-text-color);
     border-left-style: none !important;
