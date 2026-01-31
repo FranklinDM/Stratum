@@ -208,9 +208,9 @@ toolbar#ToolbarMode .toolbarbutton-text {
 }
 
 #ToolbarMode {
-  -moz-appearance: -moz-win-browsertabbar-toolbox;
+  appearance: -moz-win-browsertabbar-toolbox;
 }
 
 #ToolbarEval {
-  -moz-appearance: toolbox;
+  appearance: toolbox;
 }

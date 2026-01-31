@@ -34,7 +34,7 @@
 /* Menu */
 #placesMenu {
   margin-inline-start: 6px;
-  -moz-appearance: none;
+  appearance: none;
   border: none;
 }
 
@@ -43,7 +43,7 @@
   padding-inline-end: 1px;
   padding-top: 2px;
   padding-bottom: 2px;
-  -moz-appearance: toolbarbutton;
+  appearance: toolbarbutton;
   color: -moz-DialogText;
   border: 1px solid transparent;
 }
@@ -128,7 +128,7 @@
 }
 
 #organizerScopeBar > toolbarbutton {
-  -moz-appearance: none;
+  appearance: none;
   border: 1px solid transparent;
   border-radius: 2px;
   padding: 0 !important;
@@ -176,12 +176,12 @@
 
 @media not all and (-moz-windows-classic) {
   #placesToolbox {
-    -moz-appearance: none;
+    appearance: none;
     background-color: transparent;
   }
 
   #placesToolbar {
-    -moz-appearance: none;
+    appearance: none;
     background-color: -moz-Dialog;
     color: -moz-dialogText;
   }
@@ -228,7 +228,7 @@
   }
 
   #searchFilter {
-    -moz-appearance: none;
+    appearance: none;
     padding: 2px;
     padding-inline-start: 4px;
     background-clip: padding-box;

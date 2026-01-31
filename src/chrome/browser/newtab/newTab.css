@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 :root {
-  -moz-appearance: none;
+  appearance: none;
   font-size: 75%;
   background-color: transparent;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 #newtab-undo-close-button {
-  -moz-appearance: none;
+  appearance: none;
   padding: 0;
   border: none;
   width: 16px;
@@ -221,7 +221,7 @@ body {
 
 
 .newtab-undo-button {
-  -moz-appearance: none;
+  appearance: none;
   color: -moz-nativehyperlinktext;
   color: rgb(0,102,204);
   cursor: pointer;

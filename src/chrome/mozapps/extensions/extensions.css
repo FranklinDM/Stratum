@@ -158,7 +158,7 @@
 /*** category selector ***/
 
 #categories {
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   margin-inline-end: -1px;
   background-color: transparent;
@@ -167,7 +167,7 @@
 }
 
 .category {
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   color: #252F3B;
   min-height: 0;
@@ -300,7 +300,7 @@
 }
 
 #header-search {
-  -moz-appearance: none;
+  appearance: none;
   color: black;
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.32) rgba(0, 0, 0, 0.37);
@@ -333,11 +333,11 @@
 /*** sorters ***/
 
 .sort-controls {
-  -moz-appearance: none;
+  appearance: none;
 }
 
 .sorter {
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   background-color: transparent;
   color: #536680;
@@ -409,7 +409,7 @@
 /*** list ***/
 
 .list {
-  -moz-appearance: none;
+  appearance: none;
   margin: 0;
   border: none;
   background-color: transparent;
@@ -592,7 +592,7 @@
 }
 
 .addon .relnotes-toggle {
-  -moz-appearance: none;
+  appearance: none;
   border: none;
   background: transparent;
   font-weight: bold;
@@ -703,7 +703,7 @@
 }
 
 .search-filter-radio {
-  -moz-appearance: none;
+  appearance: none;
   padding: 0 6px;
   margin: 0 3px;
   border-radius: 10000px;
@@ -830,7 +830,7 @@
 }
 
 #detail-contrib-btn {
-  -moz-appearance: none;
+  appearance: none;
   color: #FFF;
   border: 1px solid #3A4EEE;
   border-radius: 3px;
@@ -991,7 +991,7 @@ menulist { /* Fixes some styling inconsistencies */
 .download-progress[complete] .end-cap,
 .download-progress[mode="undetermined"] .end-cap,
 .download-progress .progress .progress-bar {
-  -moz-appearance: none;
+  appearance: none;
   background-image: linear-gradient(#92DDA0, #6FC483 49%, #5EB272 51%, #80CE91);
   margin-top: -1px;
   margin-bottom: -1px;
@@ -1016,7 +1016,7 @@ menulist { /* Fixes some styling inconsistencies */
 }
 
 .download-progress .progress {
-  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   padding: 0;
   margin: 0;
@@ -1039,7 +1039,7 @@ menulist { /* Fixes some styling inconsistencies */
 }
 
 .download-progress .cancel {
-  -moz-appearance: none;
+  appearance: none;
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 3px;
@@ -1121,7 +1121,7 @@ menulist { /* Fixes some styling inconsistencies */
 }
 
 button.button-link {
-  -moz-appearance: none;
+  appearance: none;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -1149,7 +1149,7 @@ button.button-link:not([disabled="true"]):active:hover {
 }
 
 .header-button {
-  -moz-appearance: none;
+  appearance: none;
   margin: 0;
   background: rgba(151,152,153,.05)
               linear-gradient(rgba(251, 252, 253, 0.95), rgba(246, 247, 248, 0.47) 49%, 
